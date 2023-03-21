@@ -13,7 +13,8 @@ module.exports = {
         mediumItalic: ['PlusJakartaSans-MediumItalic']
       },
       colors: {
-        primary: 'var(--color)'
+        primary: 'var(--color)',
+        secondary: 'var(--secondColor)'
       }
     },
   },

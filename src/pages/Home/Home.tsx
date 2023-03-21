@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Home = () => {
   return (
     <div>
@@ -17,8 +18,10 @@ const Home = () => {
       </section>
       <section className="flex flex-col items-center justify-center mt-[28px]">
         <div className="relative w-[755px] flex flex-col justify-center items-center">
-          <input type="text" placeholder="Search name or username" className="w-full h-[85px] bg-[#F2F2F2] rounded-[50px] border-none outline-none ring-0 text-[#8BA2B1] text-[20px] font-[400] leading-[23px] pl-[95px] font-light" />
-          <img src='images/icon_search.svg' alt="icon_search" className="absolute right-[31.7px] w-[30px]" />
+          <div className="relative w-full flex items-center">
+            <input type="text" placeholder="Search name or username" className="w-full h-[85px] bg-[#F2F2F2] rounded-[50px] border-none outline-none ring-0 text-secondary text-[20px] font-[400] leading-[23px] pl-[95px] font-light" />
+            <img src='images/icon_search.svg' alt="icon_search" className="absolute right-[31.7px] w-[30px]" />
+          </div>          
           <div className="flex justify-end w-full pr-[36px]">
             <p className="text-[#828282] text-[12px] font-[400] leading-[22px] font-light">Report an issue</p>
           </div>
@@ -31,8 +34,7 @@ const Home = () => {
             <button className="flex justify-center items-center bg-[#F2F2F2] w-[265px] h-[59px] rounded-[50px] text-primary text-[20px] leading-[30px] font-[600] font-bold">
               Pledge
               <img src="images/pledge.svg" alt="pledge" className="w-[61px] ml-[10px]" />
-            </button>
-            
+            </button>            
           </div>
         </div>
       </section>

@@ -40,5 +40,10 @@ html * {
 
 
 html {
- --color: '#190202'
+ --color: '#190202';
+ --secondColor: '#8BA2B1'
+}
+
+:root {
+  overflow-x: none;
 }
