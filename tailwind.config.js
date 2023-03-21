@@ -6,9 +6,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        light: ['SpaceGrotesk-Light'],
-        medium: ['SpaceGrotesk-Medium']
+        light: ['PlusJakartaSans-Light'],
+        medium: ['PlusJakartaSans-Medium'],
+        extraBold: ['PlusJakartaSans-ExtraBold'],
+        bold: ['PlusJakartaSans-Bold'],
+        mediumItalic: ['PlusJakartaSans-MediumItalic']
       },
+      colors: {
+        primary: 'var(--color)'
+      }
     },
   },
   plugins: [],

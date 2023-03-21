@@ -2,8 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'PlusJakartaSans-Light';
+  src: url('../public/fonts/PlusJakartaSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Medium';
+  src: url('../public/fonts/PlusJakartaSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-ExtraBold';
+  src: url('../public/fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Bold';
+  src: url('../public/fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-MediumItalic';
+  src: url('../public/fonts/PlusJakartaSans-MediumItalic.ttf') format('truetype');
+}
+
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+
+html {
+ --color: '#190202'
 }
