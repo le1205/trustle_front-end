@@ -33,7 +33,7 @@ const Home = () => {
             <p className="text-[#828282] text-[12px] font-[400] leading-[22px] font-light">Report an issue</p>
           </div>
         </div>
-        <div className="flex mt-[27px] flex-col md:flex-row w-full">
+        <div className="flex mt-[27px] flex-col md:flex-row w-full md:w-fit">
           <div className="w-full flex justify-center">
             <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[45px] lg:h-[59px] rounded-[50px] text-[#FBFBFB] text-[20px] leading-[25px] font-[800] font-bold">Sign up</button>       
           </div>
