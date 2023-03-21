@@ -1,16 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation  } from "react-router-dom";
 import PowerUps from "components/Powerups/Powerups";
 
 const Navbar = () => {
   const [powerUps, setPowerUps] = useState(false);
+  const [home, setHome] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    location.pathname === '/' ? setHome(true) : setHome(false);
+  }, [location.pathname])
 
   return (
     <header className="relative z-40">
       <nav className="flex justify-between h-[100px] px-[20px] md:px-[42px] items-center">
         <div className="cursor-pointer">
           <Link to='/'> 
-            <img src='images/logo.svg' alt="logo" className="w-[119.8px]" />
+            <img src='images/logo.svg' alt="logo" className={`w-[119.8px] ${home ? 'hidden' : 'block'}`} />
           </Link>
         </div>
         <div className="flex justify-center items-center">
