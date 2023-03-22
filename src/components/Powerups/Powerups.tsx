@@ -7,7 +7,7 @@ interface PowerUpsProps {
 
 const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
   return (
-    <div className={`absolute ${powerUps ? 'w-[348px]' : 'w-0'} transition-[width] duration-500 ease-in-out overflow-hidden right-0 flex justify-end`}>     
+    <div className={`absolute w-[348px] ${powerUps ? 'top-[100px]' : 'top-[-500px]'} transition-[top] duration-500 ease-in-out overflow-hidden right-[19px] flex justify-end`}>     
       <div className="w-[305px] flex justify-center flex-col items-center relative">
         <div onClick={() => setPowerUps(false)}>
           <img src="images/close_menu.svg" alt="close_menu" className="cursor-pointer w-[35px]" />
@@ -56,8 +56,7 @@ const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
           <div className="absolute w-[43px] left-[-43px] h-[59px] bg-[white] bg-opacity-33 backdrop-blur-[15px] border-[1px] border-solid border-[#F1F1F1] rounded-tl-full rounded-bl-full flex justify-center items-center">
             <img src='images/arrow_up_left.svg' alt="arrow_up_left" className="ml-[7px]" />
           </div>
-        </div>
-        
+        </div>        
       </div>   
     </div>
    
