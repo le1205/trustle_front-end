@@ -10,7 +10,8 @@ module.exports = {
         medium: ['PlusJakartaSans-Medium'],
         extraBold: ['PlusJakartaSans-ExtraBold'],
         bold: ['PlusJakartaSans-Bold'],
-        mediumItalic: ['PlusJakartaSans-MediumItalic']
+        mediumItalic: ['PlusJakartaSans-MediumItalic'],
+        regular: ['PlusJakartaSans-Regular']
       },
       colors: {
         primary: 'var(--color)',

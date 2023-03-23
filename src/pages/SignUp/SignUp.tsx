@@ -12,8 +12,8 @@ const SignUp = () => {
           <input type='text' className="w-[90%] lg:w-[526px] h-[59.22px] bg-[#F2F2F2] rounded-[34.8344px] text-[#8BA2B1] text-[21.4257px] leading-[32px] font-[400] font-light pl-[28.9px] outline-none ring-0 mt-[17.75px]" placeholder="Submit password" />
         </div>
         <div className="mt-[48px] flex flex-col lg:flex-row w-[90%] lg:w-fit">
-          <button className="w-full lg:w-[265px] h-[59px] bg-[#F2F2F2] rounded-[50px] text-primary text-[20px] leading-[30px] font-[700] font-extraBold hover:shadow-[0_4px_15px_rgba(0,0,0,1)]">Sign up</button>
-          <button className="w-full lg:w-[265px] h-[59px] bg-[#5f8fe6] rounded-[50px] text-white text-[20px] leading-[30px] font-[700] font-extraBold ml-[2px] mt-[20px] lg:mt-0 hover:shadow-[0_4px_15px_rgba(0,0,0,1)]">Log in</button>
+          <button className="w-full lg:w-[265px] h-[59px] bg-[#F2F2F2] rounded-[50px] text-primary text-[20px] leading-[30px] font-[700] font-extraBold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">Sign up</button>
+          <button className="w-full lg:w-[265px] h-[59px] bg-[#5f8fe6] rounded-[50px] text-white text-[20px] leading-[30px] font-[700] font-extraBold ml-[2px] mt-[20px] lg:mt-0 hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Log in</button>
         </div>
       </div>
     </section>

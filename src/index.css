@@ -27,6 +27,10 @@
   src: url('../public/fonts/PlusJakartaSans-MediumItalic.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url('../public/fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+} 
 
 body {
   margin: 0;
@@ -46,4 +50,42 @@ html {
 
 :root {
   overflow-x: none;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.react-tabs > ul, .react-tabs > ul > li {
+  border: none;
+ 
+}
+
+.react-tabs > ul {
+  margin-bottom: 30px;
+}
+
+.react-tabs > ul > li {
+  padding: 0 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  color: #4F4F4F;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .react-tabs > ul > li {
+    padding: 0 6px;
+  }
+}
+
+.react-tabs > ul > .react-tabs__tab--selected {
+  border: none;
+  text-decoration: underline;
+  color: #3773E0;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 3px;
 }

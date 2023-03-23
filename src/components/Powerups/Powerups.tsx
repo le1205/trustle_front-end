@@ -7,7 +7,7 @@ interface PowerUpsProps {
 
 const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
   return (
-    <div className={`absolute w-[348px] ${powerUps ? 'top-[100px]' : 'top-[-500px]'} transition-[top] duration-500 ease-in-out overflow-hidden right-[19px] flex justify-end`}>     
+    <div className={`absolute w-[348px] ${powerUps ? 'top-[100px]' : 'top-[-500px]'} transition-[top] duration-500 ease-in-out overflow-hidden right-[19px] flex justify-end z-50`}>     
       <div className="w-[305px] flex justify-center flex-col items-center relative">
         <div onClick={() => setPowerUps(false)}>
           <img src="images/close_menu.svg" alt="close_menu" className="cursor-pointer w-[35px]" />
@@ -20,36 +20,39 @@ const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
               <div className="flex justify-between h-[62px]">
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/account.svg' alt="account" className="w-[49.44px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium">Account</p>
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Account</p>
                 </div>
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/search.svg' alt="search" className="w-[48.63px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium">Search</p>
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Search</p>
                 </div>
                 <div className="flex flex-col items-center justify-between">
-                  <img src='images/account.svg' alt="account" className="w-[45.96px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium">Memorial</p>
+                  <img src='images/memorial.svg' alt="memorial" className="w-[45.96px]" />
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Memorial</p>
                 </div>
               </div>
               <div className="flex justify-between h-[74px] mt-[20px]">
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/will.svg' alt="will" className="w-[72px] mt-[19px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium">Will</p>
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Will</p>
                 </div>
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/city.svg' alt="city" className="w-[62.93px] mt-[13.46px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium">City</p>
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">City</p>
                 </div>
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/hardware.svg' alt="hardware" className="w-[52.07px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium">Memorial</p>
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Hardware</p>
                 </div>
               </div>
               <div className="flex justify-between mt-[27px]">
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/pledge.svg' alt="pledge" className="w-[85px]" />
-                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-medium mt-[16.38px]">Pledge</p>
+                  <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light mt-[16.38px]">Pledge</p>
                 </div>
+              </div>
+              <div className="flex justify-center mt-[10px]">
+                <p className="text-primary text-[15px] leading-[22px] font-[600] font-bold">© 2023 Trustle</p>
               </div>
             </div>
           </div>

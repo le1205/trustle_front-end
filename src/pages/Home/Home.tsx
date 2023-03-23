@@ -42,10 +42,10 @@ const Home = () => {
         </div>
         <div className="flex mt-[27px] flex-col lg:flex-row w-full lg:w-fit">
           <div className="w-full flex justify-center">
-            <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[45px] lg:h-[59px] rounded-[50px] text-[#FBFBFB] text-[20px] leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,1)]">Sign up</button>       
+            <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[45px] lg:h-[59px] rounded-[50px] text-[#FBFBFB] text-[20px] leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Sign up</button>       
           </div>
           <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[20px] lg:mt-0">            
-            <button className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[45px] lg:h-[59px] rounded-[50px] text-primary text-[20px] leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,1)]">
+            <button className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[45px] lg:h-[59px] rounded-[50px] text-primary text-[20px] leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
               Pledge
               <img src="images/pledge.svg" alt="pledge" className="w-[61px] ml-[10px]" />
             </button>            
