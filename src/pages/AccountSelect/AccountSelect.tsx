@@ -9,7 +9,7 @@ const AccountSelect = () => {
         <div className="col-span-1 lg:col-span-2">
           <Account />
         </div>        
-        <div className="w-fit mx-auto mt-[256px] mb-[65px]">
+        <div className="w-fit mx-auto mt-[256px] lg:mt-0 mb-[65px] lg:mb-0">
           <ItemInfo />
         </div>
       </div>
