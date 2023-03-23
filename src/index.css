@@ -44,8 +44,8 @@ html * {
 
 
 html {
- --color: '#190202';
- --secondColor: '#8BA2B1'
+ --color: #190202;
+ --secondColor: #8BA2B1;
 }
 
 :root {

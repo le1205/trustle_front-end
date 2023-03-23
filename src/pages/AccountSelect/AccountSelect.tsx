@@ -4,8 +4,8 @@ import React from "react";
 
 const AccountSelect = () => {
   return (
-    <section className="px-[25px] lg:pl-[164px] lg:pr-[108px] flex justify-center">
-      <div className="grid grid-cols-1 lg:grid-cols-3 max-w-[1168px] w-full">
+    <section className="px-[25px] lg:pl-[108px] lg:pr-[108px] flex justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-[1440px]">
         <div className="col-span-1 lg:col-span-2">
           <Account />
         </div>        

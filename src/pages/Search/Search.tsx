@@ -4,7 +4,7 @@ import React from "react";
 const Search = () => {
   return (
     <section className="px-[25px] lg:pl-[164px] lg:pr-[108px] flex justify-center">
-      <div className="grid grid-cols-3 max-w-[1168px]">
+      <div className="grid grid-cols-3">
         <div className="col-span-2">
           <p className="text-[#828282] text-[14px] leading-[22px] font-[400] font-medium">Approximately 105 000 000 profiles (0,43 seconds)</p>
           <div className="mt-[11px]">
