@@ -8,7 +8,7 @@ import Search from 'pages/Search';
 import AccountSelect from 'pages/AccountSelect';
 import ReportIssue from 'pages/ReportIssue';
 import Pledge from 'pages/Pledge';import './App.css';
-
+import Checkout from 'pages/Checkout';
 
 function App() {
   return (
@@ -22,7 +22,8 @@ function App() {
           <Route path="/search" element={<Search />} />          
           <Route path="/accountselect" element={<AccountSelect />} />          
           <Route path="/reportissue" element={<ReportIssue />} />         
-          <Route path="/pledge" element={<Pledge />} />          
+          <Route path="/pledge" element={<Pledge />} />       
+          <Route path="/checkout" element={<Checkout />} />          
         </Routes>
       </Layout>
     </BrowserRouter>
