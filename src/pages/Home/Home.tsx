@@ -58,11 +58,11 @@ const Home = () => {
           <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[10px] lg:mt-0">            
             <button className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-primary text-[12px] lg:text-[20px] leading-[18px] lg:leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
               Pledge
-              <img src="images/pledge.svg" alt="pledge" className="w-[61px] ml-[10px]" />
+              <img src="images/pledge.svg" alt="pledge" className="w-[40px] lg:w-[56px] ml-[10px]" />
             </button>            
           </div>
         </div>
-        <div className="my-[85px] hidden lg:block">
+        <div className="mt-[85px] mb-[20px] hidden lg:block">
           <p className="text-black text-[15px] leading-[23px] font-[400] w-[518.55px]">In our beta v.1 you can find out all there is to know about your friends and family online presence through searching their name</p>
         </div>
         <div className="lg:hidden w-[90%] mx-auto mt-[100px] mb-[147px] gap-[20px] flex flex-col">

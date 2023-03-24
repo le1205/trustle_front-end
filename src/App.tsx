@@ -3,11 +3,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from 'components/Layout';
 import Home from 'pages/Home';
 import SignUp from 'pages/SignUp';
+import Login from 'pages/Login';
 import Search from 'pages/Search';
 import AccountSelect from 'pages/AccountSelect';
 import ReportIssue from 'pages/ReportIssue';
-import Login from 'pages/Login';
-import './App.css';
+import Pledge from 'pages/Pledge';import './App.css';
+
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/login" element={<Login />} />        
           <Route path="/search" element={<Search />} />          
           <Route path="/accountselect" element={<AccountSelect />} />          
-          <Route path="/reportissue" element={<ReportIssue />} />          
+          <Route path="/reportissue" element={<ReportIssue />} />         
+          <Route path="/pledge" element={<Pledge />} />          
         </Routes>
       </Layout>
     </BrowserRouter>
