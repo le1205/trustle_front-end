@@ -19,7 +19,8 @@ const Layout = ({ children }: LayoutProps) => {
   }, [location.pathname])
 
   return (
-    <div className={`${!search && 'flex flex-col justify-between'} min-h-screen relative`}>
+    // <div className={`${!search && 'flex flex-col justify-between'} min-h-screen relative`}>
+    <div className='min-h-screen relative'>
       <Navbar home={home} search={search} powerUps={powerUps} setPowerUps={setPowerUps} />
       {children}
       <Footer search={search} />

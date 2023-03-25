@@ -9,6 +9,7 @@ import AccountSelect from 'pages/AccountSelect';
 import ReportIssue from 'pages/ReportIssue';
 import Pledge from 'pages/Pledge';import './App.css';
 import Checkout from 'pages/Checkout';
+import MyAccount from 'pages/MyAccount';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/reportissue" element={<ReportIssue />} />         
           <Route path="/pledge" element={<Pledge />} />       
           <Route path="/checkout" element={<Checkout />} />          
+          <Route path="/account" element={<MyAccount />} />       
         </Routes>
       </Layout>
     </BrowserRouter>

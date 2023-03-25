@@ -27,9 +27,9 @@ const Pledge = () => {
               </li>
             </ul>
             <ul className="flex gap-[17px] lg:gap-[32px] justify-center flex-wrap">
-              <li className="border-solid border-[0.3px] border-black w-[86.11px] lgw-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Monthly</li>
-              <li className="border-solid border-[0.3px] border-black w-[86.11px] lgw-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Yearly</li>
-              <li className="border-solid border-[0.3px] border-black w-[86.11px] lgw-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Just Once</li>
+              <li className="border-solid border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Monthly</li>
+              <li className="border-solid border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Yearly</li>
+              <li className="border-solid border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Just Once</li>
             </ul>
           </div>
           <div className="mt-[55px] lg:mt-[40px]">

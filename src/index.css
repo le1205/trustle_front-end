@@ -61,12 +61,24 @@ html {
  
 }
 
+.react-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width:1024px) {
+  .react-tabs {
+    display: block;
+  }
+}
+
 .react-tabs > ul {
   margin-bottom: 30px;
 }
 
 .react-tabs > ul > li {
-  padding: 0 11px;
+  padding: 0 12px;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   color: #4F4F4F;
@@ -76,9 +88,13 @@ html {
   text-decoration-thickness: 3px;
 }
 
+.react-tabs > ul > li:first-child {
+  padding-left: 0;
+}
+
 @media screen and (max-width: 1024px) {
   .react-tabs > ul > li {
-    padding: 0 6px;
+    padding: 0 7px;
   }
 }
 
