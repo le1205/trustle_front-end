@@ -10,6 +10,9 @@ import ReportIssue from 'pages/ReportIssue';
 import Pledge from 'pages/Pledge';import './App.css';
 import Checkout from 'pages/Checkout';
 import MyAccount from 'pages/MyAccount';
+import About from 'pages/About';
+import Faq from 'pages/Faq';
+import Privacy from 'pages/Privacy';
 
 function App() {
   return (
@@ -25,7 +28,10 @@ function App() {
           <Route path="/reportissue" element={<ReportIssue />} />         
           <Route path="/pledge" element={<Pledge />} />       
           <Route path="/checkout" element={<Checkout />} />          
-          <Route path="/account" element={<MyAccount />} />       
+          <Route path="/account" element={<MyAccount />} />
+          <Route path="/about" element={<About />} />   
+          <Route path="/faq" element={<Faq />} />   
+          <Route path="/privacy" element={<Privacy />} />       
         </Routes>
       </Layout>
     </BrowserRouter>
