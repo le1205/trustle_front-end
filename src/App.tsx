@@ -13,6 +13,7 @@ import MyAccount from 'pages/MyAccount';
 import About from 'pages/About';
 import Faq from 'pages/Faq';
 import Privacy from 'pages/Privacy';
+import Terms from 'pages/Terms';
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
           <Route path="/account" element={<MyAccount />} />
           <Route path="/about" element={<About />} />   
           <Route path="/faq" element={<Faq />} />   
-          <Route path="/privacy" element={<Privacy />} />       
+          <Route path="/privacy" element={<Privacy />} />   
+          <Route path="/terms" element={<Terms />} />       
         </Routes>
       </Layout>
     </BrowserRouter>

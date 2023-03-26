@@ -1,0 +1,30 @@
+import React from "react";
+
+const Terms = () => {
+  return (
+    <section className="pl-[42px] pr-[24px] lg:pl-[128px] lg:pr-[113px] flex justify-center mb-[30px]">
+      <div className="max-w-[1440px] w-full">
+        <h1 className="text-black text-[19.73px] lg:text-[32.4043px] leading-[25px] lg:leading-[49px] font-[400] font-bold mt-[50px] lg:mt-0]">Terms</h1>
+        <div className="pl-0 lg:pl-[14px] mt-[25px] lg:mt-[38px] gap-[20px] flex flex-col">
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular">Terms and Conditions</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">1. Introduction.</span> <br />Trustle (hereinafter "Trustle" or "Company") provides its online account removal service subject to the following terms and conditions. By using Trustle's services, you agree to be bound by these terms and conditions, as well as the Company's Privacy Policy and any other guidelines or rules that may be published by Trustle from time to time.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">2. Service Description.</span> <br />Trustle provides a service for individuals to manage and remove their online accounts upon death or permanent incapacity. Trustle will access the online accounts of the user and delete or remove them as instructed.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">3. Account Ownership.</span> <br />The user must be the rightful owner of all online accounts submitted to Trustle for removal. Trustle assumes no responsibility for any disputes arising from account ownership.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">4. Evidence of Ownership.</span> <br />The user must provide adequate proof of ownership of their online accounts. This may include, but is not limited to, usernames, passwords, security questions, and answers, as well as any other relevant information requested by Trustle.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">5. Account Access.</span> <br />The user agrees to provide Trustle with full access to their online accounts created through Trustle. Trustle will not be held responsible for any unauthorized use of the user's accounts.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">6. Confidentiality.</span> <br />Trustle agrees to maintain the confidentiality of the user's account information and to use it solely for the purpose of removing the user's online accounts.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">7. User Responsibility.</span> <br />The user is responsible for ensuring that the information provided to Trustle is accurate and up-to-date. The user must also notify Trustle of any changes to their online accounts.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">8. Fees.</span> <br />The user may be required to pay fees for Trustle's services. Fees will be clearly stated on the Company's website and are subject to change without notice.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">9. Termination.</span> <br />The user may terminate their agreement with Trustle at any time. Trustle may also terminate the agreement if the user breaches any of these terms and conditions.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">10. Disclaimer of Warranties.</span> <br />Trustle provides its services "as is" and makes no representations or warranties of any kind, express or implied, as to the operation of its services or the information, content, materials, or products included on its website.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">11. Limitation of Liability.</span> <br />Trustle shall not be liable for any damages of any kind arising from the use of its services, including but not limited to direct, indirect, incidental, punitive, and consequential damages.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">12. Governing Law.</span> <br />These terms and conditions shall be governed and construed in accordance with the laws of the jurisdiction in which Trustle operates.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">13. Changes to Terms.</span> <br />Trustle reserves the right to change these terms and conditions at any time, effective upon posting the changes on its website. The user's continued use of Trustle's services constitutes their agreement to be bound by the then-current terms and conditions.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] leading-[29px] lg:leading-[37px] font-[400] font-regular"><span className="ml-[15px]">14. Contact Information.</span> <br />If you have any questions or comments about these terms and conditions, please contact Trustle at our report page.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Terms
