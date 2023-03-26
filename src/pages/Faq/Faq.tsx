@@ -3,7 +3,7 @@ import React from "react";
 const Faq = () => {
 
   return (
-    <section className="px-[42px] lg:pl-[128px] lg:pr-[113px] flex justify-center mb-[30px]">
+    <section className="pl-[42px] pr-[24px] lg:pl-[128px] lg:pr-[113px] flex justify-center mb-[30px]">
       <div className="max-w-[1440px] w-full">
         <h2 className="text-black text-[19.73px] lg:text-[32.4043px] leading-[25px] lg:leading-[49px] font-[400] font-bold mt-[50px] lg:mt-0]">FAQs</h2>
         <div className="mt-[25px] lg:mt-[38px] gap-[30px] flex flex-col">
