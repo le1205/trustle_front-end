@@ -14,6 +14,8 @@ import About from 'pages/About';
 import Faq from 'pages/Faq';
 import Privacy from 'pages/Privacy';
 import Terms from 'pages/Terms';
+import Overview from 'pages/Overview';
+import Research from 'pages/Research';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="/faq" element={<Faq />} />   
           <Route path="/privacy" element={<Privacy />} />   
           <Route path="/terms" element={<Terms />} />       
+          <Route path="/overview" element={<Overview />} />       
+          <Route path="/research" element={<Research />} />       
         </Routes>
       </Layout>
     </BrowserRouter>
