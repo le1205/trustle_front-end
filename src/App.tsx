@@ -16,6 +16,10 @@ import Privacy from 'pages/Privacy';
 import Terms from 'pages/Terms';
 import Overview from 'pages/Overview';
 import Research from 'pages/Research';
+import Will from 'pages/Will';
+import Memorial from 'pages/Memorial';
+import City from 'pages/City';
+import Hardware from 'pages/Hardware';
 
 function App() {
   return (
@@ -37,7 +41,11 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />   
           <Route path="/terms" element={<Terms />} />       
           <Route path="/overview" element={<Overview />} />       
-          <Route path="/research" element={<Research />} />       
+          <Route path="/research" element={<Research />} /> 
+          <Route path="/will" element={<Will />} />       
+          <Route path="/memorial" element={<Memorial />} />    
+          <Route path="/city" element={<City />} />       
+          <Route path="/hardware" element={<Hardware />} />       
         </Routes>
       </Layout>
     </BrowserRouter>
