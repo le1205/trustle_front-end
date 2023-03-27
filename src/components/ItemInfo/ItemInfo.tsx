@@ -5,8 +5,8 @@ const ItemInfo = () => {
     <>
       <div className="w-[245px] mx-auto lg:mx-0 lg:w-full bg-white border-[1px] border-solid border-[#E0E0E0] rounded-[6px] pb-[16px]]">
         <div className="flex p-[2px]">
-          <img src="images/1.png" alt='pic1' className="w-[109px] lg:w-[164px]" />
-          <img src="images/2.png" alt='pic2' className="w-[96px] lg:w-[145px]" />
+          <img src="images/1.png" alt='pic1' className="w-[109px] lg:w-[140px]" />
+          <img src="images/2.png" alt='pic2' className="w-[96px] lg:w-[120px]" />
         </div>
         <div className="flex justify-end">
           <div className="w-[83px] lg:w-[125px] h-[21px] lg:h-[32px] bg-[#666666] rounded-tl-[3px]  flex justify-center items-center mt-[10px]">

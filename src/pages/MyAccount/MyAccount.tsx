@@ -11,7 +11,7 @@ const MyAccount = () => {
           <h1 className="text-black text-[21px] lg:text-[25.2545px] font-[800] leading-[27px] lg:leading-[32px] font-extraBold">Your account</h1>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 w-full pl-0 lg:pl-[30px] mt-[10px]">
-          <div className="col-span-1 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2 flex justify-center">
             <AccountTab />            
           </div>        
           <div className="w-full mx-auto mt-[50px] lg:mt-0 mb-[52px] lg:mb-0">

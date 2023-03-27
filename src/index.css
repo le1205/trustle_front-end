@@ -64,7 +64,8 @@ html {
 .react-tabs {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  width: fit-content;
 }
 
 @media screen and (min-width:1024px) {
