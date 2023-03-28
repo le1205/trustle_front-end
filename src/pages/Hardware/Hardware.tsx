@@ -6,7 +6,7 @@ const Hardware = () => {
       <div className="max-w-[1440px] w-full">
         <div className="flex mt-[20px] lg:mt-0 gap-[20px] items-center">
           <img src="images/hardware.svg" alt="hardware" className="w-[92.62px]" />
-          <h1 className="text-black text-[21.61px] lg:text-[25.2545px] leading-[27px] lg:leading-[32px] font-[800] font-bold">City</h1>
+          <h1 className="text-black text-[21.61px] lg:text-[25.2545px] leading-[27px] lg:leading-[32px] font-[800] font-bold">Hardware</h1>
         </div>        
         <div className="pl-0 lg:pl-[14px] mt-[10px]">
           <p className="text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular">Physical cash, telephone subscriptions, and touchscreens - are all highly medieval tech-solutions to great products that allow us to move and communicate freely with each-other. Through scientific research, <span className="text-primary font-extraBold">Trustle</span> is approaching hardware with new eyes and redefining the consumer needs from the ground up.</p>          
