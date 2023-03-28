@@ -8,19 +8,21 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  const [home, setHome] = useState(false);
-  const [search, setSearch] = useState(false);
-  const [powerUps, setPowerUps] = useState(false);
+  const [home, setHome] = useState<boolean>(false);
+  const [search, setSearch] = useState<boolean>(false);
+  const [powerUps, setPowerUps] = useState<boolean>(false);
+  const [center, setCenter] = useState<boolean>(false);
   const location = useLocation();
 
   useEffect(() => {
     location.pathname === '/' ? setHome(true) : setHome(false);
     location.pathname === '/search' || location.pathname === '/accountselect' ? setSearch(true) : setSearch(false);
+    location.pathname === '/' || location.pathname === '/setting' || location.pathname === '/signup' || location.pathname === '/login'
+    ? setCenter(true) : setCenter(false)
   }, [location.pathname])
 
   return (
-    // <div className={`${!search && 'flex flex-col justify-between'} min-h-screen relative`}>
-    <div className='min-h-screen relative'>
+    <div className={`${center ? 'flex flex-col justify-between' : ''} min-h-screen relative`}>
       <Navbar home={home} search={search} powerUps={powerUps} setPowerUps={setPowerUps} />
       {children}
       <Footer search={search} />

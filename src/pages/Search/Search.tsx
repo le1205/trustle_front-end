@@ -3,7 +3,7 @@ import React from "react";
 
 const Search = () => {
   return (
-    <section className="px-[25px] lg:px-[50px] xl:pl-[164px] xl:pr-[108px] flex justify-center mt-[10px] lg:mt-0">
+    <section className="px-[25px] lg:px-[50px] xl:pl-[164px] xl:pr-[108px] flex justify-center mt-[20px] lg:mt-0">
       <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-[1440px]">
         <div className="col-span-1 lg:col-span-2">
           <p className="text-[#828282] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial">Approximately 105 000 000 profiles (0,43 seconds)</p>

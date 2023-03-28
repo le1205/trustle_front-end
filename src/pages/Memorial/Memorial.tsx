@@ -4,7 +4,7 @@ const Memorial = () => {
   return (
     <section className="pl-[42px] pr-[24px] lg:px-[128px] flex justify-center mb-[30px]">
       <div className="max-w-[1440px] w-full">
-        <div className="flex mt-[50px] lg:mt-0] gap-[20px] items-center">
+        <div className="flex mt-[20px] lg:mt-0 gap-[20px] items-center">
           <img src="images/memorial.svg" alt="memorial" className="w-[75.74px]" />
           <h1 className="text-black text-[21.61px] lg:text-[25.2545px] leading-[27px] lg:leading-[32px] font-[800] font-bold">Memorial</h1>
         </div>        

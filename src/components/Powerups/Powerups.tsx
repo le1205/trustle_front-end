@@ -9,8 +9,8 @@ const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
   return (
     <div className={`absolute w-[348px] ${powerUps ? 'top-[100px]' : 'top-[-500px]'} transition-[top] duration-500 ease-in-out overflow-hidden right-[19px] flex justify-end z-50`}>     
       <div className="w-[305px] flex justify-center flex-col items-center relative">
-        <div onClick={() => setPowerUps(false)}>
-          <img src="images/close_menu.svg" alt="close_menu" className="cursor-pointer w-[35px]" />
+        <div onClick={() => setPowerUps(false)} className="w-[38.14px] h-[38.14px] rounded-[54.4928px] border-[1px] border-solid border-[#F1F1F1] bg-white flex justify-center items-center mr-[-150px] md:mr-[-40px]">
+          <img src="images/close_x.svg" alt="close_x" className="cursor-pointer w-[35px]" />
         </div>
         <div className="flex items-center w-full">
           <div className="rounded-[50px] bg-white bg-opacity-33 border-solid border-[1px] border-[#F1F1F1] pt-[26px] w-full flex flex-col items-center mt-[8px]">

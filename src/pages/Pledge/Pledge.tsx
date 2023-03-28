@@ -2,7 +2,7 @@ import React from "react";
 
 const Pledge = () => {
   return (
-    <section className="px-[33px] lg:px-[121px]">
+    <section className="px-[33px] lg:px-[121px] mt-[20px] lg:mt-0">
       <div className="max-w-[1440px]">
         <div className="flex gap-[10px] lg:gap-[19px]">
           <img src="images/pledge.svg" alt="pledge" className="w-[117.5px]" />

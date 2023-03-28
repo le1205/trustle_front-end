@@ -2,7 +2,7 @@ import React from "react";
 
 const ReportIssue = () => {
   return (
-    <section className="pl-[33px] lg:pl-[141px] pr-[28px] lg:pr-[121px]">
+    <section className="pl-[33px] lg:pl-[141px] pr-[28px] lg:pr-[121px] mt-[20px] lg:mt-0">
       <div className="max-w-[1440px] mx-auto">
         <h3 className="text-black font-[800] text-[20px] lg:text-[25px] leading-[26px] lg:leading-[32px] font-bold">Report an issue</h3>
         <p className="text-black font-[400] hidden lg:block text-[25px] leading-[37px] font-regular mt-[10px]">If you have identified an issue, e.g. a profile displaying inaccurate information. Please submit a message describing the issue and Trustle will do it’s best aligning our technology to your needs.</p>
