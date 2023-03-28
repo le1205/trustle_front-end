@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <section>
       <div className="flex justify-center flex-col items-center">
-        <div>
+        <div className="mt-[40px]">
           <img src="images/signup_logo.svg" alt="signup_logo" className="w-[126.1px]" />
         </div>
         <div className="mt-[50px] flex flex-col items-center w-full lg:w-fit gap-[11.47px] lg:gap-[17.75px]">
@@ -22,7 +22,7 @@ const Login = () => {
             </svg> */}
           </div>          
         </div>
-        <div className="mt-[31.66px] lg:mt-[48.78px] flex flex-col lg:flex-row w-[90%] lg:w-fit gap-3 lg:gap-1">
+        <div className="mt-[31.66px] lg:mt-[48.78px] mb-[50px] flex flex-col lg:flex-row w-[90%] lg:w-fit gap-3 lg:gap-1">
           <button className="w-full lg:w-[265px] h-[38px] lg:h-[59px] bg-[#F2F2F2] rounded-[32.4462px] lg:rounded-[50px] text-primary text-[12.9785px] lg:text-[20px] leading-[19px] lg:leading-[30px] font-[700] font-extraBold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">Sign up here</button>
           <button className="w-full lg:w-[265px] h-[38px] lg:h-[59px] bg-[#5f8fe6] rounded-[32.4462px] lg:rounded-[50px] text-white text-[12.9785px] lg:text-[20px] leading-[19px] lg:leading-[30px] font-[700] font-extraBold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Log in</button>
         </div>

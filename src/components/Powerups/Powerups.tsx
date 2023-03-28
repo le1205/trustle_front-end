@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 interface PowerUpsProps {
   powerUps: boolean;
   setPowerUps: (value: boolean) => void;
@@ -16,7 +16,7 @@ const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
           <div className="rounded-[50px] bg-white bg-opacity-33 border-solid border-[1px] border-[#F1F1F1] pt-[26px] w-full flex flex-col items-center mt-[8px]">
             <h1 className="text-primary text-[20px] font-[800] leading-[25px] font-extraBold">Trustle Powerups</h1>
             <div className="mt-[16px] w-full h-[1px] mb-[10px] border-b-[1px] border-solid border-[#F1F1F1]"></div>
-            <div className="w-full px-[40px] py-[30px]">
+            <div className="w-full px-[40px] pt-[30px] pb-[15px]">
               <div className="flex justify-between h-[62px]">
                 <div className="flex flex-col items-center justify-between">
                   <img src='images/account.svg' alt="account" className="w-[49.44px]" />
@@ -56,9 +56,9 @@ const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
               </div>
             </div>
           </div>
-          <div className="absolute w-[43px] left-[-43px] h-[59px] bg-[white] bg-opacity-33 backdrop-blur-[15px] border-[1px] border-solid border-[#F1F1F1] rounded-tl-full rounded-bl-full flex justify-center items-center">
+          <Link to='/privacy' onClick={() => setPowerUps(false)} className="absolute w-[43px] left-[-43px] h-[59px] bg-[white] bg-opacity-33 backdrop-blur-[15px] border-[1px] border-solid border-[#F1F1F1] rounded-tl-full rounded-bl-full flex justify-center items-center">
             <img src='images/arrow_up_left.svg' alt="arrow_up_left" className="ml-[7px]" />
-          </div>
+          </Link>
         </div>        
       </div>   
     </div>
