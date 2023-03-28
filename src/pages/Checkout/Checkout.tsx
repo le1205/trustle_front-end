@@ -9,8 +9,8 @@ const Checkout = () => {
           <p className="text-black text-[19.73px] lg:text-[25.2545px] font-[800] leading-[25px] lg:leading-[32px] font-bold">Pledge</p>
         </div> 
         <div className="ml-0 lg:ml-[21px] mt-[27px] lg:mt-[12px]">
-          <p className="text-black hidden lg:block text-[24.7907px] font-[800] leading-[37px] font-light"><span className="font-extraBold">Trustle</span> is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions. Our mission is to promote the development of ethical AI practices with a priority on caution over speed.</p>
-          <p className="text-black block lg:hidden text-[16.2252px] font-[800] leading-[20px] font-light"><span className="font-extraBold">Trustle</span> is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions.</p>
+          <p className="text-black hidden lg:block text-[24.7907px] font-[800] leading-[37px] font-light">Trustle is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions. Our mission is to promote the development of ethical AI practices with a priority on caution over speed.</p>
+          <p className="text-black block lg:hidden text-[16.2252px] font-[800] leading-[20px] font-light">Trustle is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions.</p>
           <p className="text-black block lg:hidden text-[16.2252px] font-[800] leading-[20px] font-light mt-[20px]">Our mission is to promote the development of ethical AI practices with a priority on caution over speed.</p>
           <p className="ml-0 lg:ml-[13px] text-[#8BA2B1] font-arial font-[400] text-[14.9253px] lg:text-[18px] leading-[18px] lg:leading-[22px] mt-[27px] lg:mt-[37px]">Pledge - USD 20 every month</p>
           <p className="ml-0 lg:ml-[13px] text-[#8BA2B1] font-arial font-[400] text-[14.9253px] lg:text-[18px] leading-[18px] lg:leading-[22px] mt-[5px]">T-Shirt (1, White, Size L) -  USD 60</p>

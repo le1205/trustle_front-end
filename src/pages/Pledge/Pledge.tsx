@@ -9,36 +9,38 @@ const Pledge = () => {
           <p className="text-black text-[19.73px] lg:text-[25.2545px] font-[800] leading-[25px] lg:leading-[32px] font-bold">Pledge</p>
         </div>        
         <div className="ml-0 lg:ml-[21px] mt-[27px] lg:mt-[12px]">
-          <p className="text-black hidden lg:block text-[24.7907px] font-[800] leading-[37px] font-light"><span className="font-extraBold">Trustle</span> is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions. Our mission is to promote the development of ethical AI practices with a priority on caution over speed.</p>
-          <p className="text-black block lg:hidden text-[16.2252px] font-[800] leading-[20px] font-light"><span className="font-extraBold">Trustle</span> is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions.</p>
+          <p className="text-black hidden lg:block text-[24.7907px] font-[800] leading-[37px] font-light">Trustle is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions. Our mission is to promote the development of ethical AI practices with a priority on caution over speed.</p>
+          <p className="text-black block lg:hidden text-[16.2252px] font-[800] leading-[20px] font-light">Trustle is committed to safely producing sustainable technology solutions that will democratically improve the lives of millions.</p>
           <p className="text-black block lg:hidden text-[16.2252px] font-[800] leading-[20px] font-light mt-[20px]">Our mission is to promote the development of ethical AI practices with a priority on caution over speed.</p>
           <div className="border-solid border-[1px] border-black px-[18px] py-[8px] w-fit flex flex-col gap-[7px] mt-[27px] lg:mt-[37px]">
             <ul className="flex gap-[9.57px] lg:gap-[18px] flex-wrap">
-              <li className="border-solid border-[0.3px] border-black w-[24.98px] lg:w-[47px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$2</li>
-              <li className="border-solid border-[0.3px] border-black w-[24.98px] lg:w-[47px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$5</li>
-              <li className="border-solid border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$10</li>
-              <li className="border-solid border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$20</li>
-              <li className="border-solid border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$30</li>
-              <li className="border-solid border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$50</li>
-              <li className="border-solid border-[0.3px] border-black w-[31.36px] lg:w-[59px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$100</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[24.98px] lg:w-[47px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$2</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[24.98px] lg:w-[47px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$5</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$10</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$20</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$30</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[26.58px] lg:w-[50px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$50</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[31.36px] lg:w-[59px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$100</li>
               <li className="flex">
                 <div className="border-solid border-[0.3px] border-black w-[54.75px] lg:w-[103px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Other</div>
                 <div className="border-l-0 border-solid border-[0.3px] border-black w-[31.36px] lg:w-[59px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">$_</div>
               </li>
             </ul>
             <ul className="flex gap-[17px] lg:gap-[32px] justify-center flex-wrap">
-              <li className="border-solid border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Monthly</li>
-              <li className="border-solid border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Yearly</li>
-              <li className="border-solid border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Just Once</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Monthly</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Yearly</li>
+              <li className="border-solid hover:bg-[#8BA2B1] border-[0.3px] border-black w-[86.11px] lg:w-[162px] h-[21.26px] lg:h-[40px] flex justify-center items-center text-black font-arial text-[9px] lg:text-[18px] leading-[11px] lg:leading-[21px] font-[400] cursor-pointer">Just Once</li>
             </ul>
           </div>
           <div className="mt-[55px] lg:mt-[40px]">
             <div className="flex h-[118.26px] lg:h-[177px]">
-              <div className="w-[129px] lg:w-[194px] border-solid border-[1px] border-black flex justify-center items-center">
+              <div className="w-[129px] relative lg:w-[194px] border-solid border-[1px] border-black flex justify-center items-center">
                 <img src='images/tshirt_left.svg' alt="tshirt_left" className="w-[126.13px] lg:w-[188.78px]" />
+                <img src="images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
               </div>
-              <div className="w-[129px] lg:w-[194px] border-l-0 border-solid border-[1px] border-black flex justify-center items-center">
+              <div className="w-[129px] relative lg:w-[194px] border-l-0 border-solid border-[1px] border-black flex justify-center items-center">
                 <img src='images/tshirt_right.svg' alt="tshirt_right" className="w-[129.05px] lg:w-[193.14px]" />
+                <img src="images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
               </div>
             </div>
             <div className="w-[258px] lg:w-[388px] items-center bg-[#F2F2F2] border-t-0 border-solid border-[1px] border-black h-[46px] flex justify-around">

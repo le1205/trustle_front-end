@@ -24,21 +24,21 @@ const Home = () => {
 
   return (
     <section>
-      <div className="flex justify-center mt-[129px] lg:mt-[50px]">
+      <div className="flex justify-center mt-[129px] lg:mt-[50px] w-[90%] mx-auto lg:w-full">
         <div>
-          <img src="images/logo_mark.svg" alt="logo_mark" className="w-[69.85px] lg:w-[126.1px]" />
+          <img src="images/logo_mark.svg" alt="logo_mark" className="w-[65px] lg:w-[126.1px]" />
         </div>
-        <div className="ml-[27.76px] lg:ml-[50px]">
-          <h1 className="text-primary text-[75.5357px] lg:text-[136.36px] font-[800] leading-[95px] lg:leading-[130px] not-italic font-bold">Trustle</h1>
+        <div className="ml-[15px] lg:ml-[50px]">
+          <h1 className="text-primary text-[70px] lg:text-[136.36px] font-[800] leading-[95px] lg:leading-[130px] not-italic font-bold">Trustle</h1>
           <p className="text-primary text-[10.539px] lg:text-[19.0254px] font-[500] leading-[13px] lg:leading-[24px] font-mediumItalic text-right">*Anti-AGI For Profit Organisation</p>
         </div>
         <div>
           <p className="text-primary text-[10px] lg:text-[19.0254px] font-[500] leading-[13px] lg:leading-[24px] font-extraBold">*</p>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mt-[28px]">
+      <div className="flex flex-col items-center justify-center ">
         <div className="relative w-[90%] lg:w-[755px] flex flex-col justify-center items-center">
-          <form className="relative w-full flex items-center" onSubmit={handleSearch}>
+          <form className="relative w-full flex items-center mt-[50px] lg:mt-[70px]" onSubmit={handleSearch}>
             <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search name or username" className="w-full h-[42px] lg:h-[85px] bg-[#F2F2F2] rounded-[50px] border-none outline-none ring-0 text-secondary text-[13.2989px] lg:text-[20px] font-[400] leading-[15px] lg:leading-[23px] pl-[22px] lg:pl-[95px] font-arial" />
             <img src='images/icon_search.svg' alt="icon_search" className="absolute right-[15px] lg:right-[31.7px] w-[15px] lg:w-[30px] cursor-pointer" onClick={handleSearch} />
           </form>          
@@ -46,7 +46,7 @@ const Home = () => {
             <p className="text-[#828282] text-[7.32673px] lg:text-[12px] font-[400] leading-[13px] lg:leading-[22px] font-arial">Report an issue</p>
           </div>
         </div>
-        <div className="flex mt-[31px] lg:mt-[49.57px] flex-col lg:flex-row w-full lg:w-fit">
+        <div className="flex mt-[20px] flex-col lg:flex-row w-full lg:w-fit">
           <div className="w-full flex justify-center">
             {
               setting ? 
@@ -55,7 +55,7 @@ const Home = () => {
             }
            
           </div>
-          <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[10px] lg:mt-0">            
+          <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[25px] lg:mt-0">            
             <button className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-primary text-[12.2112px] lg:text-[20px] leading-[18px] lg:leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
               Pledge
               <img src="images/pledge.svg" alt="pledge" className="w-[37.24px] lg:w-[61px] ml-[10px]" />
