@@ -24,12 +24,12 @@ const Home = () => {
 
   return (
     <section>
-      <div className="flex justify-center mt-[129px] lg:mt-0">
+      <div className="flex justify-center mt-[129px] lg:mt-[50px]">
         <div>
-          <img src="images/logo_mark.svg" alt="logo_mark" className="w-[55.88px] lg:w-[100.88px]" />
+          <img src="images/logo_mark.svg" alt="logo_mark" className="w-[69.85px] lg:w-[126.1px]" />
         </div>
         <div className="ml-[27.76px] lg:ml-[50px]">
-          <h1 className="text-primary text-[60.4px] lg:text-[110px] font-[800] leading-[95px] lg:leading-[130px] not-italic font-bold">Trustle</h1>
+          <h1 className="text-primary text-[75.5357px] lg:text-[136.36px] font-[800] leading-[95px] lg:leading-[130px] not-italic font-bold">Trustle</h1>
           <p className="text-primary text-[10.539px] lg:text-[19.0254px] font-[500] leading-[13px] lg:leading-[24px] font-mediumItalic text-right">*Anti-AGI For Profit Organisation</p>
         </div>
         <div>
@@ -39,7 +39,7 @@ const Home = () => {
       <div className="flex flex-col items-center justify-center mt-[28px]">
         <div className="relative w-[90%] lg:w-[755px] flex flex-col justify-center items-center">
           <form className="relative w-full flex items-center" onSubmit={handleSearch}>
-            <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search name or username" className="w-full h-[42px] lg:h-[68px] bg-[#F2F2F2] rounded-[50px] border-none outline-none ring-0 text-secondary text-[13.2989px] lg:text-[20px] font-[400] leading-[15px] lg:leading-[23px] pl-[22px] lg:pl-[95px] font-arial" />
+            <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search name or username" className="w-full h-[42px] lg:h-[85px] bg-[#F2F2F2] rounded-[50px] border-none outline-none ring-0 text-secondary text-[13.2989px] lg:text-[20px] font-[400] leading-[15px] lg:leading-[23px] pl-[22px] lg:pl-[95px] font-arial" />
             <img src='images/icon_search.svg' alt="icon_search" className="absolute right-[15px] lg:right-[31.7px] w-[15px] lg:w-[30px] cursor-pointer" onClick={handleSearch} />
           </form>          
           <div className="flex justify-end w-full pr-[36px]">
@@ -62,7 +62,7 @@ const Home = () => {
             </button>            
           </div>
         </div>
-        <div className="mt-[85px] mb-[20px] hidden lg:block w-[518.55px] px-[15px] lg:px-[12px] rounded-[11.5234px] py-[5px] bg-gray-200 bg-opacity-40">
+        <div className="mt-[85px] mb-[50px] hidden lg:block w-[518.55px] px-[15px] lg:px-[12px] rounded-[11.5234px] py-[5px] bg-gray-200 bg-opacity-40">
           <p className="text-black text-[15.3249px] leading-[23px] font-[400]">In our <span className="text-secondary">beta v.1</span> you can find out all there is to know about your friends and family online presence through searching their name</p>
         </div>
         <div className="lg:hidden w-[90%] mx-auto mt-[106px] mb-[129px] gap-[20px] flex flex-col px-[15px] py-[5px] rounded-[11.5234px] bg-gray-200 bg-opacity-40">
