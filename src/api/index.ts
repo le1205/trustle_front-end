@@ -9,9 +9,9 @@ export const registerUser = async (
         email: email,
         name: name,
         password: password,
-    };
+    }; console.log("registerData", registerData)
     let result = await fetch(
-        "https://localhost:4000/api/signup",
+        "http://localhost:4000/api/signup",
         {
             method: "POST",
             body: JSON.stringify(registerData),

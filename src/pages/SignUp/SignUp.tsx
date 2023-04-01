@@ -88,7 +88,7 @@ const SignUp = () => {
           values.name,
           values.password
         );
-        if (result && result.isError === false) {
+        if (result && result.isError === false) { console.log("result", result)
           notify(result.message);
           setLoading(false);
           navigate("/login");
@@ -214,7 +214,7 @@ const SignUp = () => {
         </div>
 
         {
-          responseError && <p className="text-[#ff0000]">{responseError}</p>
+          responseError && <p className="text-[#ff0000] mt-[20px]">{responseError}</p>
         }        
 
         <div className="mt-[31.66px] lg:mt-[48.78px] flex flex-col lg:flex-row w-[90%] lg:w-fit gap-3 lg:gap-1">
