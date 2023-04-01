@@ -2,20 +2,16 @@ import React from "react";
 
 export const registerUser = async (
     email: string,
-    firstName: string,
-    lastName: string,
-    imageUrl: string,
+    name: string,
     password: string
 ): Promise<any> => {
     let registerData = {
         email: email,
-        firstName: firstName,
-        lastName: lastName,
-        imageUrl: imageUrl,
+        name: name,
         password: password,
     };
     let result = await fetch(
-        "https://nftmarketbackendapp.herokuapp.com/api/signup",
+        "https://localhost:4000/api/signup",
         {
             method: "POST",
             body: JSON.stringify(registerData),
@@ -37,7 +33,7 @@ export const login = async (email: string, password: string): Promise<any> => {
       email: email,
       password: password,
     };
-    let result = fetch("https://nftmarketbackendapp.herokuapp.com/api/login", {
+    let result = fetch("https://localhost:4000/api/login", {
       method: "POST",
       body: JSON.stringify(loginData),
       headers: {

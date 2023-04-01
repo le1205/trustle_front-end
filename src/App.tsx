@@ -20,35 +20,39 @@ import Will from 'pages/Will';
 import Memorial from 'pages/Memorial';
 import City from 'pages/City';
 import Hardware from 'pages/Hardware';
+import AppContextProvider from "context/AppContextProvider";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />     
-          <Route path="/setting" element={<Home />} />        
-          <Route path="/signup" element={<SignUp />} />        
-          <Route path="/login" element={<Login />} />        
-          <Route path="/search" element={<Search />} />          
-          <Route path="/accountselect" element={<AccountSelect />} />          
-          <Route path="/reportissue" element={<ReportIssue />} />         
-          <Route path="/pledge" element={<Pledge />} />       
-          <Route path="/checkout" element={<Checkout />} />          
-          <Route path="/account" element={<MyAccount />} />
-          <Route path="/about" element={<About />} />   
-          <Route path="/faq" element={<Faq />} />   
-          <Route path="/privacy" element={<Privacy />} />   
-          <Route path="/terms" element={<Terms />} />       
-          <Route path="/overview" element={<Overview />} />       
-          <Route path="/research" element={<Research />} /> 
-          <Route path="/will" element={<Will />} />       
-          <Route path="/memorial" element={<Memorial />} />    
-          <Route path="/city" element={<City />} />       
-          <Route path="/hardware" element={<Hardware />} />       
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <AppContextProvider>
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />     
+            <Route path="/setting" element={<Home />} />        
+            <Route path="/signup" element={<SignUp />} />        
+            <Route path="/login" element={<Login />} />        
+            <Route path="/search" element={<Search />} />          
+            <Route path="/accountselect" element={<AccountSelect />} />          
+            <Route path="/reportissue" element={<ReportIssue />} />         
+            <Route path="/pledge" element={<Pledge />} />       
+            <Route path="/checkout" element={<Checkout />} />          
+            <Route path="/account" element={<MyAccount />} />
+            <Route path="/about" element={<About />} />   
+            <Route path="/faq" element={<Faq />} />   
+            <Route path="/privacy" element={<Privacy />} />   
+            <Route path="/terms" element={<Terms />} />       
+            <Route path="/overview" element={<Overview />} />       
+            <Route path="/research" element={<Research />} /> 
+            <Route path="/will" element={<Will />} />       
+            <Route path="/memorial" element={<Memorial />} />    
+            <Route path="/city" element={<City />} />       
+            <Route path="/hardware" element={<Hardware />} />       
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </AppContextProvider>
+    
   );
 }
 
