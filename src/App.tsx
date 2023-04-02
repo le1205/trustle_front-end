@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { toast } from "react-toastify";
 import Layout from 'components/Layout';
 import Home from 'pages/Home';
 import SignUp from 'pages/SignUp';
@@ -21,8 +22,25 @@ import Memorial from 'pages/Memorial';
 import City from 'pages/City';
 import Hardware from 'pages/Hardware';
 import AppContextProvider from "context/AppContextProvider";
+import Forgot from 'pages/Forgot';
+import { checkUserSession } from "api";
 
 function App() {
+  useEffect(() => {
+    const checkSession = async () => { console.log("here app tsx")
+      const result = await checkUserSession();
+      if (result && result.isError === true) {
+        window.localStorage.clear();
+        notify(result.message);
+      }
+    };
+    checkSession();
+  }, []);
+
+  const notify = (message: string): void => {
+    toast(message);
+  }
+
   return (
     <AppContextProvider>
       <BrowserRouter>
@@ -31,7 +49,8 @@ function App() {
             <Route path="/" element={<Home />} />     
             <Route path="/setting" element={<Home />} />        
             <Route path="/signup" element={<SignUp />} />        
-            <Route path="/login" element={<Login />} />        
+            <Route path="/login" element={<Login />} />  
+            <Route path="/forgot" element={<Forgot />} />        
             <Route path="/search" element={<Search />} />          
             <Route path="/accountselect" element={<AccountSelect />} />          
             <Route path="/reportissue" element={<ReportIssue />} />         
