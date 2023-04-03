@@ -24,6 +24,7 @@ import Hardware from 'pages/Hardware';
 import AppContextProvider from "context/AppContextProvider";
 import Forgot from 'pages/Forgot';
 import { checkUserSession } from "api";
+import UpdateUserPasword from 'pages/UpdateUserPasword';
 
 function App() {
   useEffect(() => {
@@ -50,7 +51,8 @@ function App() {
             <Route path="/setting" element={<Home />} />        
             <Route path="/signup" element={<SignUp />} />        
             <Route path="/login" element={<Login />} />  
-            <Route path="/forgot" element={<Forgot />} />        
+            <Route path="/forgot" element={<Forgot />} />       
+            <Route path="/updatepassword" element={<UpdateUserPasword />} />        
             <Route path="/search" element={<Search />} />          
             <Route path="/accountselect" element={<AccountSelect />} />          
             <Route path="/reportissue" element={<ReportIssue />} />         

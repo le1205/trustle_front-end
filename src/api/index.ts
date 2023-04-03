@@ -80,4 +80,26 @@ export const checkUserSession = async (): Promise<any> => {
   return result;
 };
 
+export const updateNewPassword = async (password: string, tokenParam: string): Promise<any> => {
+  const updatePasswordData = {
+    password: password,
+  };
+  
+  const result = await fetch(
+    `http://localhost:4000/api/updateNewPassword/${tokenParam}`,
+    {
+      method: "PUT",
+      body: JSON.stringify(updatePasswordData),
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  ).then((response) => {
+    return response.json();
+  });
+
+  return result;
+};
 
