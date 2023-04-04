@@ -1,7 +1,23 @@
+import React, { useState, useEffect, FormEvent, useContext, useLayoutEffect } from "react";
 import ItemInfo from "components/ItemInfo";
-import React from "react";
+import { UseGoogleSearch, SearchResult } from 'api'
+import { AppContext, AppContextType } from "context/AppContextProvider";
+
+// type AppContextType = typeof AppContext extends React.Context<infer T> ? T : never;
 
 const Search = () => {
+
+  const { search } = useContext<AppContextType>(AppContext);
+  console.log("search", search)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result: SearchResult[] = await UseGoogleSearch(search, 10, 1);
+      console.log('result', result)
+    }
+    fetchData();
+  }, [search]);
+  
   return (
     <section className="px-[25px] lg:px-[50px] xl:pl-[164px] xl:pr-[108px] flex justify-center mt-[20px] lg:mt-0">
       <div className="grid grid-cols-1 lg:grid-cols-3 w-full max-w-[1440px]">

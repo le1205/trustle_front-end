@@ -28,7 +28,7 @@ import UpdateUserPasword from 'pages/UpdateUserPasword';
 
 function App() {
   useEffect(() => {
-    const checkSession = async () => { console.log("here app tsx")
+    const checkSession = async () => {
       const result = await checkUserSession();
       if (result && result.isError === true) {
         window.localStorage.clear();

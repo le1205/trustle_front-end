@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FormEvent, useContext } from "react";
 import { To, useNavigate, useLocation } from 'react-router-dom';
+import { AppContextType, AppContext } from "context/AppContextProvider";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -7,17 +8,23 @@ const Home = () => {
   const [setting, setSetting] = useState(false);
   const location = useLocation();
 
+  const { searchValue } = useContext<AppContextType>(AppContext);
+
   const handleNavigate = (e: { preventDefault: () => void; }, url: To) => {
     e.preventDefault();
     navigate(url)
   }
 
-  const handleSearch = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    console.log("input", input);
-    navigate('/search')
+  const handleSearch = (e: FormEvent<HTMLFormElement> | null) => {
+    if (e) {
+      e.preventDefault();
+    }        
+    if (input) {
+      searchValue(input);
+      navigate('/search');
+    }    
   }
-  
+
   useEffect(() => {
     location.pathname === '/setting' ? setSetting(true) : setSetting(false);
   }, [location.pathname])
@@ -38,10 +45,10 @@ const Home = () => {
       </div>
       <div className="flex flex-col items-center justify-center ">
         <div className="relative w-[90%] lg:w-[755px] flex flex-col justify-center items-center">
-          <form className="relative w-full flex items-center mt-[50px] lg:mt-[70px]" onSubmit={handleSearch}>
+          <form className="relative w-full flex items-center mt-[50px] lg:mt-[70px]" onSubmit={(e) => handleSearch(e)}>
             <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Search name or username" className="w-full h-[42px] lg:h-[85px] bg-[#F2F2F2] rounded-[50px] border-none outline-none ring-0 text-secondary text-[13.2989px] lg:text-[20px] font-[400] leading-[15px] lg:leading-[23px] pl-[22px] lg:pl-[95px] font-arial" />
-            <img src='images/icon_search.svg' alt="icon_search" className="absolute right-[15px] lg:right-[31.7px] w-[15px] lg:w-[30px] cursor-pointer" onClick={handleSearch} />
-          </form>          
+            <img src='images/icon_search.svg' alt="icon_search" className="absolute right-[15px] lg:right-[31.7px] w-[15px] lg:w-[30px] cursor-pointer" onClick={() => handleSearch(null)} />
+          </form>
           <div className="flex justify-end w-full pr-[36px]">
             <p className="text-[#828282] text-[7.32673px] lg:text-[12px] font-[400] leading-[13px] lg:leading-[22px] font-arial">Report an issue</p>
           </div>
@@ -49,17 +56,17 @@ const Home = () => {
         <div className="flex mt-[20px] flex-col lg:flex-row w-full lg:w-fit">
           <div className="w-full flex justify-center">
             {
-              setting ? 
-              <button onClick={(e) => handleNavigate(e, "/")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Setting <img src="images/setting.svg" alt="setting" className="w-[25px] lg:w-[37px] inline ml-[5px]" /></button> :
-              <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Sign up</button>       
+              setting ?
+                <button onClick={(e) => handleNavigate(e, "/")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Setting <img src="images/setting.svg" alt="setting" className="w-[25px] lg:w-[37px] inline ml-[5px]" /></button> :
+                <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Sign up</button>
             }
-           
+
           </div>
-          <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[25px] lg:mt-0">            
+          <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[25px] lg:mt-0">
             <button className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-primary text-[12.2112px] lg:text-[20px] leading-[18px] lg:leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
               Pledge
               <img src="images/pledge.svg" alt="pledge" className="w-[37.24px] lg:w-[61px] ml-[10px]" />
-            </button>            
+            </button>
           </div>
         </div>
         <div className="mt-[85px] mb-[50px] hidden lg:block w-[518.55px] px-[15px] lg:px-[12px] rounded-[11.5234px] py-[5px] bg-gray-200 bg-opacity-40">
@@ -73,6 +80,6 @@ const Home = () => {
       </div>
     </section>
   )
-} 
+}
 
 export default Home

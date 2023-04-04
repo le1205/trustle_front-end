@@ -84,7 +84,7 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
   const updatePasswordData = {
     password: password,
   };
-  
+
   const result = await fetch(
     `http://localhost:4000/api/updateNewPassword/${tokenParam}`,
     {
@@ -102,4 +102,26 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
 
   return result;
 };
+export interface SearchResult {
+  title: string;
+  link: string;
+  snippet: string;
+}
 
+export const UseGoogleSearch = async (term: string, numResults: number, pageNum: number): Promise<SearchResult[]> => {
+  const fetchData = await fetch(
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.REACT_APP_API_KEY}&cx=${process.env.REACT_APP_CONTEXT_KEY}&q=${term}&num=${numResults}&start=${pageNum}`
+  )
+    .then(response => response.json())
+    .then(result => { console.log("result", result)
+      const searchResults: SearchResult[] = result.items?.map((item: any) => ({
+        title: item.title,
+        link: item.link,
+        snippet: item.snippet
+      })) || [];
+
+      return searchResults;
+    });
+
+  return fetchData;
+}
