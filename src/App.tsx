@@ -25,6 +25,7 @@ import AppContextProvider from "context/AppContextProvider";
 import Forgot from 'pages/Forgot';
 import { checkUserSession } from "api";
 import UpdateUserPasword from 'pages/UpdateUserPasword';
+import Generate from 'pages/Generate';
 
 function App() {
   useEffect(() => {
@@ -68,7 +69,8 @@ function App() {
             <Route path="/will" element={<Will />} />       
             <Route path="/memorial" element={<Memorial />} />    
             <Route path="/city" element={<City />} />       
-            <Route path="/hardware" element={<Hardware />} />       
+            <Route path="/hardware" element={<Hardware />} />  
+            <Route path="/generate" element={<Generate />} />       
           </Routes>
         </Layout>
       </BrowserRouter>
