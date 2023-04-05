@@ -21,10 +21,12 @@ const Generate = () => {
         console.log("first and second name", nameArray[0], nameArray[1] )
         
 
-        const separators: string[] = ['', '.', '-', '_'];
+        const separators: string[] = ['', '.', '_'];
         const resultArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(firstName, lastName, separator)));
-        setResult(resultArray);
-        console.log("reuslt", resultArray)
+        const reverseArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(lastName, firstName, separator)));
+        let finalResult = [...resultArray, ...reverseArray]
+        setResult(finalResult);
+        console.log("reuslt", finalResult)
       }   
     } else {
       notify("Type your fullname or username")
@@ -40,21 +42,7 @@ const Generate = () => {
     for (let i = 1; i <= firstName.length; i++) {     
       for (let j = 1; j <= lastName.length; j++) {
         let combine1 = `${firstName.slice(0, i).toLowerCase()}${symbol}${lastName.slice(0, j).toLowerCase()}`;
-        let combine2 = `${firstName.slice(0, i).toUpperCase()}${symbol}${lastName.slice(0, j).toLowerCase()}`;
-        let combine3 = `${firstName.slice(0, i).toLowerCase()}${symbol}${lastName.slice(0, j).toUpperCase()}`;
-        let combine4 = `${firstName.slice(0, i).toUpperCase()}${symbol}${lastName.slice(0, j).toUpperCase()}`;
-        temp.push(combine1, combine2, combine3, combine4);
-        if (i < firstName.length) {
-            let combine5 = `${firstName.slice(0, i).toUpperCase() + firstName.slice(i).toLowerCase()}${symbol}${lastName.slice(0, j).toUpperCase()}`;
-            let combine6 = `${firstName.slice(0, i).toUpperCase() + firstName.slice(i).toLowerCase()}${symbol}${lastName.slice(0, j).toLowerCase()}`;
-            let combine7 = `${firstName.slice(0, i).toUpperCase() + firstName.slice(i).toLowerCase()}${symbol}${lastName.slice(0, j).toUpperCase() + lastName.slice(j).toLowerCase()}`;
-            temp.push(combine5, combine6, combine7);
-            if (j < lastName.length) {
-              let combine8 = `${firstName.slice(0, i).toLowerCase()}${symbol}${lastName.slice(0, j).toUpperCase() + lastName.slice(j).toLowerCase()}`;
-              let combine9 = `${firstName.slice(0, i).toUpperCase()}${symbol}${lastName.slice(0, j).toUpperCase() + lastName.slice(j).toLowerCase()}`;
-              temp.push(combine8, combine9);
-            }            
-        }   
+        temp.push(combine1);
       }
     }    
     return temp;
