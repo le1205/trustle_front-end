@@ -1,5 +1,5 @@
 import React, {useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useFetcher } from "react-router-dom";
 import { toast } from "react-toastify";
 import Layout from 'components/Layout';
 import Home from 'pages/Home';
@@ -26,8 +26,11 @@ import Forgot from 'pages/Forgot';
 import { checkUserSession } from "api";
 import UpdateUserPasword from 'pages/UpdateUserPasword';
 import Generate from 'pages/Generate';
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
     const checkSession = async () => {
       const result = await checkUserSession();
@@ -35,9 +38,13 @@ function App() {
         window.localStorage.clear();
         notify(result.message);
       }
-    };
+    };  
     checkSession();
   }, []);
+
+  useEffect(() => {
+    i18n.changeLanguage('translation');
+  }, [i18n]);
 
   const notify = (message: string): void => {
     toast(message);

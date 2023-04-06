@@ -1,9 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const Generate = () => {
   const [result, setResult] = useState<string[]>([]);
+  const { t, i18n } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null)
 
   const handleGenerate = (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,18 +19,25 @@ const Generate = () => {
       } else if (inputValue.trim().split(" ").length > 1) { 
         notify("This is Full Name")
         const nameArray = inputValue.trim().split(/\s+/); // split by one or more whitespace characters
-        const firstName = nameArray[0];
-        const lastName = nameArray[1];
-        console.log("first and second name", nameArray[0], nameArray[1] )
-        
+        let firstName = nameArray[0];
+        let lastName = nameArray[1];
+        for (let i = 0; i < firstName.length; i++) {
+          if (!/^[a-zA-Z]$/.test(firstName[i])) {
+            firstName = firstName.replace(firstName[i], t(firstName[i]));
+          }         
+        }   
+        for (let i = 0; i < lastName.length; i++) {
+          if (!/^[a-zA-Z]$/.test(lastName[i])) {
+            lastName = lastName.replace(lastName[i], t(lastName[i]));
+          }         
+        }        
 
         const separators: string[] = ['', '.', '_'];
         const resultArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(firstName, lastName, separator)));
         const reverseArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(lastName, firstName, separator)));
         let finalResult = [...resultArray, ...reverseArray]
         setResult(finalResult);
-        console.log("reuslt", finalResult)
-        fetchSocial();
+        // fetchSocial();
       }   
     } else {
       notify("Type your fullname or username")
@@ -76,6 +85,7 @@ const Generate = () => {
           placeholder="Fullname or Username"
         />
       </form>
+      <h1>{t('Д')}</h1>
       <div className="w-full text-center mt-[20px]">
         {
           result && result.map((item, idx) => (
