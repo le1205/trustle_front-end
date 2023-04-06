@@ -9,7 +9,7 @@ export const registerUser = async (
     email: email,
     name: name,
     password: password,
-  }; console.log("registerData", registerData)
+  }; 
   let result = await fetch(
     "http://localhost:4000/api/signup",
     {
@@ -33,7 +33,7 @@ export const login = async (email: string, password: string): Promise<any> => {
     email: email,
     password: password,
   };
-  let result = fetch("http://localhost:4000/api/login", {
+  let result = await fetch("http://localhost:4000/api/login", {
     method: "POST",
     body: JSON.stringify(loginData),
     headers: {

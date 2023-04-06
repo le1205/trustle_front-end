@@ -12,7 +12,7 @@ const ReportIssue = () => {
           <textarea className="w-full h-[136px] border-[1px] border-solid border-black bg-white outline-none ring-0 px-[22px] py-[11px] font-arial text-black"></textarea>
           <button className="w-full px-[22px] h-[36px] text-black text-[18px] leading-[22px] font-[400] font-arial text-start border-solid border-[1px] border-black border-t-transparent mt-[-8px] bg-[#F2F2F2] flex justify-between items-center">
             Send message
-            <img src='images/mail.svg' alt="mail" />
+            <img src='/images/mail.svg' alt="mail" />
           </button>
         </div>
       </div>

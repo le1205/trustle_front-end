@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
+import axios from 'axios';
 
 const Generate = () => {
   const [result, setResult] = useState<string[]>([]);
@@ -27,6 +28,7 @@ const Generate = () => {
         let finalResult = [...resultArray, ...reverseArray]
         setResult(finalResult);
         console.log("reuslt", finalResult)
+        fetchSocial();
       }   
     } else {
       notify("Type your fullname or username")
@@ -48,6 +50,19 @@ const Generate = () => {
     return temp;
   };  
 
+  const fetchSocial = async () => { console.log("twitter bear key", process.env.REACT_APP_TWITTER_BEARER_TOKEN)
+    try {
+      // const response = await axios.get(`https://api.twitter.com/1.1/users/show.json?screen_name=Julia`, {
+      //   headers: {
+      //     Authorization: `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}`
+      //   }
+      // });    
+      const response = await axios.get('http://localhost:4000/api/search')  
+    } catch (error) {
+      console.error("error", error);
+    }
+  }
+
   const notify = (message: string): void => {
     toast(message);
   }
@@ -63,8 +78,8 @@ const Generate = () => {
       </form>
       <div className="w-full text-center mt-[20px]">
         {
-          result && result.map(item => (
-            <p className="text-black text-arial text-[18px] leading-[25px]">{item}</p>
+          result && result.map((item, idx) => (
+            <p className="text-black text-arial text-[18px] leading-[25px]" key={idx}>{item}</p>
           ))
         }
       </div>

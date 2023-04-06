@@ -5,7 +5,7 @@ const Pledge = () => {
     <section className="px-[33px] lg:px-[121px] mt-[20px] lg:mt-0">
       <div className="max-w-[1440px]">
         <div className="flex gap-[10px] lg:gap-[19px]">
-          <img src="images/pledge.svg" alt="pledge" className="w-[117.5px]" />
+          <img src="/images/pledge.svg" alt="pledge" className="w-[117.5px]" />
           <p className="text-black text-[19.73px] lg:text-[25.2545px] font-[800] leading-[25px] lg:leading-[32px] font-bold">Pledge</p>
         </div>        
         <div className="ml-0 lg:ml-[21px] mt-[27px] lg:mt-[12px]">
@@ -35,12 +35,12 @@ const Pledge = () => {
           <div className="mt-[55px] lg:mt-[40px]">
             <div className="flex h-[118.26px] lg:h-[177px]">
               <div className="w-[129px] relative lg:w-[194px] border-solid border-[1px] border-black flex justify-center items-center">
-                <img src='images/tshirt_left.svg' alt="tshirt_left" className="w-[126.13px] lg:w-[188.78px]" />
-                <img src="images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
+                <img src='/images/tshirt_left.svg' alt="tshirt_left" className="w-[126.13px] lg:w-[188.78px]" />
+                <img src="/images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
               </div>
               <div className="w-[129px] relative lg:w-[194px] border-l-0 border-solid border-[1px] border-black flex justify-center items-center">
-                <img src='images/tshirt_right.svg' alt="tshirt_right" className="w-[129.05px] lg:w-[193.14px]" />
-                <img src="images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
+                <img src='/images/tshirt_right.svg' alt="tshirt_right" className="w-[129.05px] lg:w-[193.14px]" />
+                <img src="/images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
               </div>
             </div>
             <div className="w-[258px] lg:w-[388px] items-center bg-[#F2F2F2] border-t-0 border-solid border-[1px] border-black h-[46px] flex justify-around">
@@ -60,23 +60,23 @@ const Pledge = () => {
             </div>
             <div className="flex gap-[10px] lg:gap-[17px] mt-[55px] lg:mt-[40px] mb-[35px] lg:mb-[20px] flex-wrap">
               <div className="px-[11px] lg:px-[18px] py-[5px] lg:py-[9px] bg-[#F2F2F2]">
-                <img src='images/ApplePay.svg' alt='ApplePay' className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src='/images/ApplePay.svg' alt='ApplePay' className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
               </div>
               <div className="px-[11px] lg:px-[18px] py-[5px] lg:py-[9px] bg-[#F2F2F2]">
-                <img src='images/PayPal.svg' alt='PayPal' className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src='/images/PayPal.svg' alt='PayPal' className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
               </div>
               <div className="px-[11px] lg:px-[18px] py-[5px] lg:py-[9px] bg-[#8BA2B1]">
-                <img src='images/GooglePay.svg' alt='GooglePay' className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src='/images/GooglePay.svg' alt='GooglePay' className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
               </div>
               <div className="px-[11px] lg:px-[18px] py-[5px] lg:py-[9px] bg-[#F2F2F2] flex gap-[16px]">
-                <img src="images/Visa.svg" alt="Visa" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
-                <img src="images/Mastercard.svg" alt="Mastercard" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
-                <img src="images/Maestro.svg" alt="Maestro" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
-                <img src="images/DinersClub.svg" alt="DinersClub" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
-                <img src="images/Amex.svg" alt="Amex" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src="/images/Visa.svg" alt="Visa" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src="/images/Mastercard.svg" alt="Mastercard" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src="/images/Maestro.svg" alt="Maestro" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src="/images/DinersClub.svg" alt="DinersClub" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src="/images/Amex.svg" alt="Amex" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
               </div>
               <div className="px-[11px] lg:px-[23px] py-[5px] lg:py-[9px] bg-[#F2F2F2]">
-                <img src='images/Bitcoin.svg' alt="Bitcoin" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
+                <img src='/images/Bitcoin.svg' alt="Bitcoin" className="w-[25.78px] lg:w-[41px] h-[17.18px] lg:h-[27.33px]" />
               </div>
             </div>
           </div>

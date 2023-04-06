@@ -104,7 +104,7 @@ const Login = () => {
     <section>
       <form onSubmit={formik.handleSubmit} className="flex justify-center flex-col items-center">
         <div className="mt-[40px]">
-          <img src="images/signup_logo.svg" alt="signup_logo" className="w-[126.1px]" />
+          <img src="/images/signup_logo.svg" alt="signup_logo" className="w-[126.1px]" />
         </div>
         <div className="mt-[50px] flex flex-col items-center w-full lg:w-fit gap-[11.47px] lg:gap-[17.75px]">
           <input 

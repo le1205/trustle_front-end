@@ -128,7 +128,7 @@ const SignUp = () => {
     <section>
       <form className="flex justify-center flex-col items-center" onSubmit={formik.handleSubmit}>
         <div className="mt-[70px] lg:mt-[30px]">
-          <img src="images/signup_logo.svg" alt="signup_logo" className="w-[81.83px] lg:w-[126.1px]" />
+          <img src="/images/signup_logo.svg" alt="signup_logo" className="w-[81.83px] lg:w-[126.1px]" />
         </div>
         <div className="mt-[31.8px] lg:mt-[49px] flex flex-col items-center w-full lg:w-fit gap-[11.54px] lg:gap-[17.78px]">
           <input 

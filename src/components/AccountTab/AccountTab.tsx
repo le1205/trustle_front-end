@@ -27,27 +27,27 @@ const AccountTab = () => {
       <TabPanel>
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
-            <img src="images/snapchat.svg" alt="snapchat" className="w-[17px] lg:w-[23px]" />
+            <img src="/images/snapchat.svg" alt="snapchat" className="w-[17px] lg:w-[23px]" />
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
-            <img src="images/twitter.svg" alt="twitter" className="w-[17px] lg:w-[23px]" />
+            <img src="/images/twitter.svg" alt="twitter" className="w-[17px] lg:w-[23px]" />
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
-            <img src="images/facebook.svg" alt="facebook" className="w-[17px] lg:w-[23px]" />
+            <img src="/images/facebook.svg" alt="facebook" className="w-[17px] lg:w-[23px]" />
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
-            <img src="images/tiktok.svg" alt="tiktok" className="w-[17px] lg:w-[23px]" />
+            <img src="/images/tiktok.svg" alt="tiktok" className="w-[17px] lg:w-[23px]" />
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
-            <img src="images/voi.svg" alt="voi" className="w-[17px] lg:w-[23px]" />
+            <img src="/images/voi.svg" alt="voi" className="w-[17px] lg:w-[23px]" />
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
-            <img src="images/linkedin.svg" alt="linkedin" className="w-[17px] lg:w-[23px]" />
+            <img src="/images/linkedin.svg" alt="linkedin" className="w-[17px] lg:w-[23px]" />
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
         </div>        
@@ -56,37 +56,37 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
             </div>  
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+              <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+              <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
@@ -96,37 +96,37 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
             </div>  
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+              <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+              <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
@@ -136,37 +136,37 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
             </div>  
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+              <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+              <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
@@ -176,37 +176,37 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
             </div>  
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+              <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+              <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
@@ -216,37 +216,37 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
             </div>  
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+              <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+              <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
@@ -256,37 +256,37 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
             </div>  
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+              <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+              <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
           </div>
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+              <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
             </div>
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
           </div>
@@ -302,7 +302,7 @@ const AccountTab = () => {
                       <div className="flex flex-col gap-[27px] lg:gap-[43px] mt-[10px]">
                         <div className="flex items-center">
                           <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-                            <img src="images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
+                            <img src="/images/zhizhuwang.svg" alt="zhizhuwang" className="w-[12px] lg:w-[16px]" />
                           </div>        
                           <div className="flex items-center gap-[10px]">
                             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
@@ -311,7 +311,7 @@ const AccountTab = () => {
                         </div>
                         <div className="flex items-center">
                           <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-                            <img src="images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
+                            <img src="/images/adobe.svg" alt="adobe" className="w-[16px] lg:w-[22px]" />
                           </div>  
                           <div className="flex items-center gap-[10px]">
                             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbagebage</span></p>
@@ -320,7 +320,7 @@ const AccountTab = () => {
                         </div>
                         <div className="flex items-center">
                           <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-                            <img src="images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
+                            <img src="/images/adobe_cloud.svg" alt="adobe_cloud" className="w-[16px] lg:w-[22px]" />
                           </div>
                           <div className="flex items-center gap-[10px]">
                             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>
@@ -329,7 +329,7 @@ const AccountTab = () => {
                         </div>
                         <div className="flex items-center">
                           <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-                            <img src="images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
+                            <img src="/images/icopy.svg" alt="icopy" className="w-[13px] lg:w-[17px]" />
                           </div>
                           <div className="flex items-center gap-[10px]">
                             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">3 accounts identified: <span className="underline">michaelbage</span>, <span className="underline">michael.bage</span>, <span className="underline">michaelbagebage</span></p>
@@ -338,7 +338,7 @@ const AccountTab = () => {
                         </div>
                         <div className="flex items-center">
                           <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-                            <img src="images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
+                            <img src="/images/dribbble.svg" alt="dribbble" className="w-[16px] lg:w-[22px]" />
                           </div>
                           <div className="flex items-center gap-[10px]">
                             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">michaelbage</span></p>
@@ -347,7 +347,7 @@ const AccountTab = () => {
                         </div>
                         <div className="flex items-center">
                           <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-                            <img src="images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
+                            <img src="/images/tshape.svg" alt="tshape" className="w-[9px] lg:w-[12px]" />
                           </div>
                           <div className="flex items-center gap-[10px]">
                             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">1 account identified: <span className="underline">Michael Båge</span></p>

@@ -24,7 +24,7 @@ const Search = () => {
         <div className="col-span-1 lg:col-span-2">
           <p className="text-[#828282] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial">Approximately 105 000 000 profiles (0,43 seconds)</p>
           <div className="mt-[8px] lg:mt-[11px]">
-            <img src='images/1.png' alt="michael" className="w-[40.68px] lg:w-[57px]" />
+            <img src='/images/1.png' alt="michael" className="w-[40.68px] lg:w-[57px]" />
           </div>
           <div className="mt-[15px] lg:mt-[21px]">
             <h1 className="text-primary tex-[15.7006px] lg:text-[22px] leading-[16px] lg:leading-[22px] font-[700] font-arial">Michael Båge - 21 years old, London, UK</h1>
