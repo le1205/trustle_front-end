@@ -37,14 +37,7 @@ const Generate = () => {
         
         generateCombinations([], enNames);
         
-        const separators: string[] = ['_'];
-        // const resultArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(firstName, lastName, separator)));
-        // const reverseArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(lastName, firstName, separator)));
-        // let finalResult = [...resultArray, ...reverseArray]
-        // let finalResult: string[] = [];
-        // allNames.forEach((name:string[]) => {
-        //   finalResult = finalResult.concat(...separators.map((separator: string): string[] => generateUsername(name, separator)));
-        // })
+        const separators: string[] = ['', '.', '_'];
         let finalResult: string[] = ([] as string[]).concat(...allNames.map((name: string[]): string[] => ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(name, separator))))); 
         console.log("finalResult", finalResult)
         setResult(finalResult);
