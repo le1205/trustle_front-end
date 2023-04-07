@@ -17,11 +17,13 @@ const Generate = () => {
     
     if (inputValue) {
       if (inputValue.trim().split(" ").length === 1) {
-        notify("This is username")
+        notify("This is username");
+        if (inputValue.trim().length < 3) {
+          notify("Username must be over 3 letters");
+        }
       } else if (inputValue.trim().split(" ").length > 1) { 
         notify("This is Full Name")
         const nameArray = inputValue.trim().split(/\s+/);
-        console.log("nameArray", nameArray)
         let firstName = nameArray[0];
         let lastName = nameArray[1];
         const enNames = nameArray.map((name: string, index: number) => {
@@ -34,25 +36,16 @@ const Generate = () => {
         })
         
         generateCombinations([], enNames);
-        // for (let i = 0; i < firstName.length; i++) {
-        //   if (!/^[a-zA-Z]$/.test(firstName[i])) {
-        //     firstName = firstName.replace(firstName[i], t(firstName[i]));
-        //   }         
-        // }   
-        // for (let i = 0; i < lastName.length; i++) {
-        //   if (!/^[a-zA-Z]$/.test(lastName[i])) {
-        //     lastName = lastName.replace(lastName[i], t(lastName[i]));
-        //   }         
-        // }        
         
-        const separators: string[] = ['', '.', '_'];
+        const separators: string[] = ['_'];
         // const resultArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(firstName, lastName, separator)));
         // const reverseArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(lastName, firstName, separator)));
         // let finalResult = [...resultArray, ...reverseArray]
-        let finalResult: string[] = [];
-        allNames.forEach((name:string[]) => {
-          finalResult = finalResult.concat(...separators.map((separator: string): string[] => generateUsername(name, separator)));
-        })
+        // let finalResult: string[] = [];
+        // allNames.forEach((name:string[]) => {
+        //   finalResult = finalResult.concat(...separators.map((separator: string): string[] => generateUsername(name, separator)));
+        // })
+        let finalResult: string[] = ([] as string[]).concat(...allNames.map((name: string[]): string[] => ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(name, separator))))); 
         console.log("finalResult", finalResult)
         setResult(finalResult);
         // fetchSocial();
@@ -69,15 +62,17 @@ const Generate = () => {
     let temp: string[] = [];
     for (let i = 1; i <= name[0].length; i++) {     
       for (let j = 1; j <= name[1].length; j++) {
-        if (symbol === '') {
+        if (symbol === '' || symbol === '.') {
           let combine1 = `${name[0].slice(0, i).toLowerCase()}${symbol}${name[1].slice(0, j).toLowerCase()}`;
           temp = temp.concat(combine1);
-        } else {
+        } else if (symbol === '_') { 
           let combine1 = [];
           combine1.push(name[0].slice(0, i).toLowerCase(), name[1].slice(0, j).toLowerCase());
           temp = temp.concat(generateSymbolNames(combine1, symbol));
-        }        
-       
+        } else if (symbol === 'both') {
+          let dotDash = generateDotDash(`${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}`);
+          temp = temp.concat(dotDash);
+        }    
       }
     }   
     return temp;   
@@ -97,21 +92,20 @@ const Generate = () => {
           combination += symbol;
         }
         combination += mergeName[j + 1];
-      }
-    
+      }    
       withDashes.push(combination);
     }
     return withDashes;
   }
 
-  const fetchSocial = async () => { console.log("twitter bear key", process.env.REACT_APP_TWITTER_BEARER_TOKEN)
+  const fetchSocial = async () => { 
     try {
       // const response = await axios.get(`https://api.twitter.com/1.1/users/show.json?screen_name=Julia`, {
       //   headers: {
       //     Authorization: `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}`
       //   }
       // });    
-      const response = await axios.get('http://localhost:4000/api/search')  
+      // const response = await axios.get('http://localhost:4000/api/search')  
     } catch (error) {
       console.error("error", error);
     }
@@ -121,7 +115,7 @@ const Generate = () => {
     toast(message);
   }
 
-  function generateCombinations(currentCombination: string[], remainingNumbers: string[]): void {
+  const generateCombinations = (currentCombination: string[], remainingNumbers: string[]) => {
     if (remainingNumbers.length === 0) {
       allNames.push(currentCombination);
       return;
@@ -133,6 +127,32 @@ const Generate = () => {
     }
   }
 
+  const generateDotDash = (nameArray: string) => {
+    const withDashes: string[] = [];
+    for (let i = 1; i < Math.pow(2, nameArray.length - 1); i++) {
+      let binary = i.toString(2).padStart(nameArray.length - 1, "0");
+      let combination_dash = nameArray[0];    
+  
+      for (let j = 0; j < binary.length; j++) {
+        if (binary[j] === "1") {
+          combination_dash += '_';
+        }    
+        combination_dash += nameArray[j + 1];    
+        
+        if(j === binary.length - 1) {
+          for(let k = 1; k < combination_dash.length; k++) { 
+            if (!(combination_dash[k] === '_' || combination_dash[k-1] === '_')) {         
+              let str: string = combination_dash;
+              str = str.slice(0, k) + "." + str.substring(k);
+              withDashes.push(str);
+            }
+          }
+        }    
+      }    
+    }
+
+    return withDashes;
+  }
   return (
     <section>
       <form onSubmit={handleGenerate} className="w-full flex justify-center" >
