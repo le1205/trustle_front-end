@@ -2,11 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { string } from "yup";
 
 const Generate = () => {
   const [result, setResult] = useState<string[]>([]);
   const { t, i18n } = useTranslation();
-  const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null);
+  const allNames: string[][] = [];
 
   const handleGenerate = (e: React.FormEvent<HTMLFormElement>) => {
     setResult([]);
@@ -31,6 +33,7 @@ const Generate = () => {
           return name;
         })
         
+        generateCombinations([], enNames);
         // for (let i = 0; i < firstName.length; i++) {
         //   if (!/^[a-zA-Z]$/.test(firstName[i])) {
         //     firstName = firstName.replace(firstName[i], t(firstName[i]));
@@ -46,8 +49,10 @@ const Generate = () => {
         // const resultArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(firstName, lastName, separator)));
         // const reverseArray: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(lastName, firstName, separator)));
         // let finalResult = [...resultArray, ...reverseArray]
-        
-        const finalResult: string[] = ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(enNames, separator)));
+        let finalResult: string[] = [];
+        allNames.forEach((name:string[]) => {
+          finalResult = finalResult.concat(...separators.map((separator: string): string[] => generateUsername(name, separator)));
+        })
         console.log("finalResult", finalResult)
         setResult(finalResult);
         // fetchSocial();
@@ -74,9 +79,8 @@ const Generate = () => {
         }        
        
       }
-    }    console.log("temp", temp)
-    return temp;
-   
+    }   
+    return temp;   
   };  
 
   const generateSymbolNames = (
@@ -87,8 +91,7 @@ const Generate = () => {
     let withDashes = [];
     for (let i = 1; i < Math.pow(2, mergeName.length - 1); i++) {
       let binary = i.toString(2).padStart(mergeName.length - 1, "0");
-      let combination = mergeName[0];
-    
+      let combination = mergeName[0];    
       for (let j = 0; j < binary.length; j++) {
         if (binary[j] === "1") {
           combination += symbol;
@@ -118,35 +121,17 @@ const Generate = () => {
     toast(message);
   }
 
-// const numbers: number[] = [1, 2, 3, 4];
-// const results: number[][] = [];
-
-// function generateCombinations(currentCombination: number[], remainingNumbers: number[]): void {
-//   if (remainingNumbers.length === 0) {
-//     results.push(currentCombination);
-//     return;
-//   }
-
-//   for (let i = 0; i < remainingNumbers.length; i++) {
-//     const newCombination = [...currentCombination, remainingNumbers[i]];
-//     const newRemainingNumbers = remainingNumbers.filter((_, index) => index !== i);
-//     generateCombinations(newCombination, newRemainingNumbers);
-//   }
-// }
-
-// generateCombinations([], numbers);
-
-// console.log("generateCombinations", results);
-
-
-// const number = "1234";
-
-
-
-
-// console.log("withDashes", withDashes);
-
-
+  function generateCombinations(currentCombination: string[], remainingNumbers: string[]): void {
+    if (remainingNumbers.length === 0) {
+      allNames.push(currentCombination);
+      return;
+    }
+    for (let i = 0; i < remainingNumbers.length; i++) {
+      const newCombination = [...currentCombination, remainingNumbers[i]];
+      const newRemainingNumbers = remainingNumbers.filter((_, index) => index !== i);
+      generateCombinations(newCombination, newRemainingNumbers);
+    }
+  }
 
   return (
     <section>
