@@ -24,8 +24,6 @@ const Generate = () => {
       } else if (inputValue.trim().split(" ").length > 1) { 
         notify("This is Full Name")
         const nameArray = inputValue.trim().split(/\s+/);
-        let firstName = nameArray[0];
-        let lastName = nameArray[1];
         const enNames = nameArray.map((name: string, index: number) => {
           for (let i = 0; i < name.length; i++) {
             if (!/^[a-zA-Z]$/.test(name[i])) {              
@@ -37,7 +35,7 @@ const Generate = () => {
         
         generateCombinations([], enNames);
         
-        const separators: string[] = ['', '.', '_'];
+        const separators: string[] = ['', '.', '_', 'both'];
         let finalResult: string[] = ([] as string[]).concat(...allNames.map((name: string[]): string[] => ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(name, separator))))); 
         console.log("finalResult", finalResult)
         setResult(finalResult);
