@@ -1,14 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
-import { string } from "yup";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const Generate = () => {
   const [result, setResult] = useState<string[]>([]);
+  const [showResult, setShowResult] = useState<string[]>([]);
   const { t, i18n } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
-  const allNames: string[][] = [];
+  const [allNames, setAllNames] = useState<string[][]>([]);
+  const [pageIndex, setPageIndex] = useState<number>(1); 
+  const countPerPage = 100;
 
   const handleGenerate = (e: React.FormEvent<HTMLFormElement>) => {
     setResult([]);
@@ -22,24 +25,34 @@ const Generate = () => {
           notify("Username must be over 3 letters");
         }
       } else if (inputValue.trim().split(" ").length > 1) { 
-        notify("This is Full Name")
-        const nameArray = inputValue.trim().split(/\s+/);
-        const enNames = nameArray.map((name: string, index: number) => {
-          for (let i = 0; i < name.length; i++) {
-            if (!/^[a-zA-Z]$/.test(name[i])) {              
-              name = name.replace(name[i], t(name[i]));
-            }         
-          }  
-          return name;
-        })
-        
-        generateCombinations([], enNames);
-        
-        const separators: string[] = ['', '.', '_', 'both'];
-        let finalResult: string[] = ([] as string[]).concat(...allNames.map((name: string[]): string[] => ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(name, separator))))); 
-        console.log("finalResult", finalResult)
-        setResult(finalResult);
-        // fetchSocial();
+        if (inputValue.trim().split(" ").length > 4) {
+          notify("This is Full Name")
+          notify("Max Username is 4")
+        } else {
+          notify("This is Full Name")
+          const nameArray = inputValue.trim().split(/\s+/);
+          const enNames = nameArray.map((name: string, index: number) => {
+            for (let i = 0; i < name.length; i++) {
+              if (!/^[a-zA-Z]$/.test(name[i])) {              
+                name = name.replace(name[i], t(name[i]));
+              }         
+            }  
+            return name;
+          })
+          
+          for (let length = 2; length <= 4; length++) {
+            generateCombinations([], enNames, length, length);
+          }
+          
+          const separators: string[] = ['', '.', '_', 'both'];
+          let finalResult: string[] = ([] as string[]).concat(...allNames.map((name: string[]): string[] => ([] as string[]).concat(...separators.map((separator: string): string[] => generateUsername(name, separator))))); 
+          console.log("finalResult", finalResult)
+          setResult(finalResult);
+          setShowResult(finalResult.slice((pageIndex - 1) * countPerPage, pageIndex * countPerPage));
+          setPageIndex((prevState) => prevState + 1);
+          // fetchSocial();
+        }
+       
       }   
     } else {
       notify("Type your fullname or username")
@@ -51,21 +64,71 @@ const Generate = () => {
     symbol: string
   ): string[] => {
     let temp: string[] = [];
-    for (let i = 1; i <= name[0].length; i++) {     
-      for (let j = 1; j <= name[1].length; j++) {
-        if (symbol === '' || symbol === '.') {
-          let combine1 = `${name[0].slice(0, i).toLowerCase()}${symbol}${name[1].slice(0, j).toLowerCase()}`;
-          temp = temp.concat(combine1);
-        } else if (symbol === '_') { 
-          let combine1 = [];
-          combine1.push(name[0].slice(0, i).toLowerCase(), name[1].slice(0, j).toLowerCase());
-          temp = temp.concat(generateSymbolNames(combine1, symbol));
-        } else if (symbol === 'both') {
-          let dotDash = generateDotDash(`${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}`);
-          temp = temp.concat(dotDash);
-        }    
+    if (name.length === 2) {
+      for (let i = 1; i <= name[0].length; i++) {     
+        for (let j = 1; j <= name[1].length; j++) {
+          if (symbol === '' || symbol === '.') {
+            let combine1 = `${name[0].slice(0, i).toLowerCase()}${symbol}${name[1].slice(0, j).toLowerCase()}`;
+            temp = temp.concat(combine1);
+          } else if (symbol === '_') { 
+            let combine1 = [];
+            combine1.push(name[0].slice(0, i).toLowerCase(), name[1].slice(0, j).toLowerCase());
+            temp = temp.concat(generateSymbolNames(combine1, symbol));
+          } else if (symbol === 'both') {
+            // let dotDash = generateDotDash(`${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}`);
+            // temp = temp.concat(dotDash);
+          }    
+        }
+      }   
+    } else if (name.length === 3) { 
+      for (let i = 1; i <= name[0].length; i++) {     
+        for (let j = 1; j <= name[1].length; j++) {
+          for (let k = 1; k <=  name[2].length; k++) {
+            if (symbol === '') {
+              let combine1 = `${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}`;
+              temp = temp.concat(combine1);
+            } else if (symbol === '.') {
+              let combine1 = `${name[0].slice(0, i).toLowerCase()}${symbol}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}`;
+              let combine2 = `${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${symbol}${name[2].slice(0, k).toLowerCase()}`;
+              temp = temp.concat(combine1, combine2);
+            } else if (symbol === '_') { 
+              let combine1 = [];
+              combine1.push(name[0].slice(0, i).toLowerCase(), name[1].slice(0, j).toLowerCase(), name[2].slice(0, k).toLowerCase());
+              temp = temp.concat(generateSymbolNames(combine1, symbol));
+            } else if (symbol === 'both') {
+              let dotDash = generateDotDash(`${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}`);
+              // temp = temp.concat(dotDash);
+            }    
+          }         
+        }
       }
-    }   
+    } else if (name.length === 4) { 
+      for (let i = 1; i <= name[0].length; i++) {     
+        for (let j = 1; j <= name[1].length; j++) {
+          for (let k = 1; k <=  name[2].length; k++) {
+            for (let m = 1; m <= name[3].length; m++) {
+              if (symbol === '') {
+                let combine1 = `${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}${name[3].slice(0, m).toLowerCase()}`;
+                temp = temp.concat(combine1);
+              } else if (symbol === '.') {
+                let combine1 = `${name[0].slice(0, i).toLowerCase()}${symbol}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}${name[3].slice(0, m).toLowerCase()}`;
+                let combine2 = `${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${symbol}${name[2].slice(0, k).toLowerCase()}${name[3].slice(0, m).toLowerCase()}`;
+                let combine3 = `${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}${symbol}${name[3].slice(0, m).toLowerCase()}`;
+                temp = temp.concat(combine1, combine2, combine3);
+              } else if (symbol === '_') { 
+                let combine1 = [];
+                combine1.push(name[0].slice(0, i).toLowerCase(), name[1].slice(0, j).toLowerCase(), name[2].slice(0, k).toLowerCase(), name[3].slice(0, m).toLowerCase());
+                temp = temp.concat(generateSymbolNames(combine1, symbol));
+              } else if (symbol === 'both') {
+                let dotDash = generateDotDash(`${name[0].slice(0, i).toLowerCase()}${name[1].slice(0, j).toLowerCase()}${name[2].slice(0, k).toLowerCase()}${name[3].slice(0, m).toLowerCase()}`);
+                // temp = temp.concat(dotDash);
+              }   
+            }
+          }         
+        }
+      }
+    }
+   
     return temp;   
   };  
 
@@ -106,15 +169,20 @@ const Generate = () => {
     toast(message);
   }
 
-  const generateCombinations = (currentCombination: string[], remainingNumbers: string[]) => {
-    if (remainingNumbers.length === 0) {
-      allNames.push(currentCombination);
+  const generateCombinations = (currentCombination: string[], remainingNumbers: string[], minLength: number, maxLength: number) => {
+    if (currentCombination.length >= minLength && currentCombination.length <= maxLength) {
+      let alterNames: string[][] = [];
+      alterNames = allNames;
+      alterNames.push(currentCombination);
+      setAllNames(alterNames)
+    }
+    if (currentCombination.length >= maxLength) {
       return;
     }
     for (let i = 0; i < remainingNumbers.length; i++) {
       const newCombination = [...currentCombination, remainingNumbers[i]];
       const newRemainingNumbers = remainingNumbers.filter((_, index) => index !== i);
-      generateCombinations(newCombination, newRemainingNumbers);
+      generateCombinations(newCombination, newRemainingNumbers, minLength, maxLength);
     }
   }
 
@@ -144,6 +212,12 @@ const Generate = () => {
 
     return withDashes;
   }
+
+  const showUsernames = () => {
+    setShowResult([...showResult, ...result.slice((pageIndex - 1) * countPerPage, pageIndex * countPerPage)]);
+    setPageIndex((prevState) => prevState + 1);
+  }
+
   return (
     <section>
       <form onSubmit={handleGenerate} className="w-full flex justify-center" >
@@ -153,13 +227,21 @@ const Generate = () => {
           placeholder="Fullname or Username"
         />
       </form>
-      <h1>{t('Д')}</h1>
       <div className="w-full text-center mt-[20px]">
-        {
-          result && result.map((item, idx) => (
-            <p className="text-black text-arial text-[18px] leading-[25px]" key={idx}>{item}</p>
-          ))
-        }
+        <InfiniteScroll
+          dataLength={showResult.length}
+          next={showUsernames}
+          hasMore={true}
+          loader=''
+          scrollableTarget="scrollableDiv"
+          scrollThreshold={"10px"}
+        >
+          {
+            showResult && showResult.map((item, idx) => (
+              <p className="text-black text-arial text-[18px] leading-[25px]" key={idx}>{item}</p>
+            ))
+          }
+        </InfiniteScroll>
       </div>
     </section>
   )
