@@ -125,3 +125,26 @@ export const UseGoogleSearch = async (term: string, numResults: number, pageNum:
 
   return fetchData;
 }
+
+export const GenerateUsernames = async (enNames: string[], separators: string[]): Promise<any> => {
+  let data = {
+    enNames: enNames,
+    separators: separators
+  }; 
+
+  let result = await fetch(
+    "http://localhost:4000/api/generate",
+    {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  ).then((response) => {
+    return response.json();
+  });
+  return result;
+}

@@ -11,7 +11,7 @@ type AppContextType = typeof AppContext extends React.Context<infer T> ? T : nev
 
 const Login = () => {
   const navigate = useNavigate();
-  let [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [passwordShow, setPasswordShow] = useState<boolean>(false);
 
   const { handleLogin, logged, userName } = useContext<AppContextType>(AppContext);
