@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type FooterProps = {
   search: boolean;
@@ -17,15 +18,15 @@ const Footer = ({ search }: FooterProps) => {
           <div className="bg-[#F2F2F2] w-full px-[15px] lg:px-[120px] py-[19px] lg:py-[37.25px] ">
             <div className="max-w-[1440px] flex flex-row items-center justify-between mx-auto">
               <ul className="flex gap-[10px] lg:gap-[20px]">
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">About</li>
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">FAQs</li>
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">Research</li>
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">How Search works</li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/about'>About</Link></li>                
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/faq'>FAQs</Link></li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/research'>Research</Link></li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/overview'>How Search works</Link></li>
               </ul>
               <ul className="flex gap-[10px] lg:gap-[20px]">
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">Privacy</li>
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">Terms</li>
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer">Settings</li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/privacy'>Privacy</Link></li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/terms'></Link>Terms</li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/setting'>Settings</Link></li>
               </ul>
             </div>           
           </div>         

@@ -18,38 +18,38 @@ const PowerUps: React.FC<PowerUpsProps> = ({ powerUps, setPowerUps }) => {
             <div className="mt-[16px] w-full h-[1px] mb-[10px] border-b-[1px] border-solid border-[#F1F1F1]"></div>
             <div className="w-full px-[10px] pt-[30px] pb-[15px]">
               <div className="grid grid-cols-3 h-[62px]">
-                <div className="flex flex-col items-center justify-between">
+                <Link to='/account' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/account.svg' alt="account" className="w-[49.44px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Account</p>
-                </div>
-                <div className="flex flex-col items-center justify-between">
+                </Link>
+                <Link to='/search' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/search.svg' alt="search" className="w-[49.44px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Search</p>
-                </div>
-                <div className="flex flex-col items-center justify-between">
+                </Link>
+                <Link to='/memorial' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/memorial.svg' alt="memorial" className="w-[49.44px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Memorial</p>
-                </div>
+                </Link>
               </div>
               <div className="grid grid-cols-3 h-[74px] mt-[20px]">
-                <div className="flex flex-col items-center justify-between">
+                <Link to='/will' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/will.svg' alt="will" className="w-[49.44px] mt-[19px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Will</p>
-                </div>
-                <div className="flex flex-col items-center justify-between">
+                </Link>
+                <Link to='/city' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/city.svg' alt="city" className="w-[49.44px] mt-[13.46px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">City</p>
-                </div>
-                <div className="flex flex-col items-center justify-between">
+                </Link>
+                <Link to='/hardware' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/hardware.svg' alt="hardware" className="w-[49.44px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light">Hardware</p>
-                </div>
+                </Link>
               </div>
               <div className="grid grid-cols-3 mt-[27px]">
-                <div className="flex flex-col items-center justify-between">
+                <Link to='/pledge' onClick={() => setPowerUps(false)} className="flex flex-col items-center justify-between">
                   <img src='/images/pledge.svg' alt="pledge" className="w-[49.44px]" />
                   <p className="text-secondary text-[13px] font-[400] leading-[20px] font-light mt-[16.38px]">Pledge</p>
-                </div>
+                </Link>
               </div>
               <div className="flex justify-center mt-[10px]">
                 <p className="text-primary text-[15px] leading-[22px] font-[600] font-bold">© 2023 Trustle</p>
