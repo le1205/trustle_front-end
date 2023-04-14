@@ -25,7 +25,7 @@ const Footer = ({ search }: FooterProps) => {
               </ul>
               <ul className="flex gap-[10px] lg:gap-[20px]">
                 <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/privacy'>Privacy</Link></li>
-                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/terms'></Link>Terms</li>
+                <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/terms'>Terms</Link></li>
                 <li className="text-primary text-[8px] lg:text-[17px] leading-[12px] lg:leading-[25px] font-[400] font-medium cursor-pointer"><Link to='/setting'>Settings</Link></li>
               </ul>
             </div>           
