@@ -11,7 +11,7 @@ export const registerUser = async (
     password: password,
   }; 
   let result = await fetch(
-    "http://localhost:4000/api/signup",
+    "https://trustle-beta.com/api/signup",
     {
       method: "POST",
       body: JSON.stringify(registerData),
@@ -33,7 +33,7 @@ export const login = async (email: string, password: string): Promise<any> => {
     email: email,
     password: password,
   };
-  let result = await fetch("http://localhost:4000/api/login", {
+  let result = await fetch("https://trustle-beta.com/api/login", {
     method: "POST",
     body: JSON.stringify(loginData),
     headers: {
@@ -54,7 +54,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
     email: email,
   };
   let result = await fetch(
-    "http://localhost:4000/api/forgetPassword",
+    "https://trustle-beta.com/api/forgetPassword",
     {
       method: "POST",
       body: JSON.stringify(forgotData),
@@ -72,7 +72,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
 
 export const checkUserSession = async (): Promise<any> => {
   const result = await fetch(
-    "http://localhost:4000/api/checkUserSession"
+    "https://trustle-beta.com/api/checkUserSession"
   ).then((response: Response) => {
     return response.json();
   });
@@ -86,7 +86,7 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
   };
 
   const result = await fetch(
-    `http://localhost:4000/api/updateNewPassword/${tokenParam}`,
+    `https://trustle-beta.com/api/updateNewPassword/${tokenParam}`,
     {
       method: "PUT",
       body: JSON.stringify(updatePasswordData),
@@ -133,7 +133,7 @@ export const GenerateUsernames = async (enNames: string[], separators: string[])
   }; 
 
   let result = await fetch(
-    "http://localhost:4000/api/generate",
+    "https://trustle-beta.com/api/generate",
     {
       method: "POST",
       body: JSON.stringify(data),

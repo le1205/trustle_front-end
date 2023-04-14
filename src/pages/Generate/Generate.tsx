@@ -216,7 +216,7 @@ const Generate = () => {
       //     Authorization: `Bearer ${process.env.REACT_APP_TWITTER_BEARER_TOKEN}`
       //   }
       // });    
-      // const response = await axios.get('http://localhost:4000/api/search')  
+      // const response = await axios.get('https://trustle-beta.com/api/search')  
     } catch (error) {
       console.error("error", error);
     }
