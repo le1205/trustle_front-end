@@ -56,7 +56,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />     
-            <Route path="/setting" element={<Home />} />        
+            <Route path="/setting" element={<ReportIssue />} />        
             <Route path="/signup" element={<SignUp />} />        
             <Route path="/login" element={<Login />} />  
             <Route path="/forgot" element={<Forgot />} />       

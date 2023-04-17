@@ -112,7 +112,7 @@ const Login = () => {
             id="email"  
             onChange={formik.handleChange}
             value={formik.values.email}
-            className="w-[90%] lg:w-[526px] h-[38.43px] lg:h-[59.22px] bg-[#F2F2F2] rounded-[22.6049px] lg:rounded-[34.8344px] text-[#8BA2B1] text-[13.9036px] lg:text-[21.4257px] leading-[21px] lg:leading-[32px] font-[400] font-light pl-[18.7px] lg:pl-[28.9px] outline-none ring-0" 
+            className={`${ formik.touched.email && formik.errors.email ? "border-solid border-[1px] border-[#ff0000]" : "" } w-[90%] lg:w-[526px] h-[38.43px] lg:h-[59.22px] bg-[#F2F2F2] rounded-[22.6049px] lg:rounded-[34.8344px] text-[#8BA2B1] text-[13.9036px] lg:text-[21.4257px] leading-[21px] lg:leading-[32px] font-[400] font-light pl-[18.7px] lg:pl-[28.9px] outline-none ring-0`}
             placeholder="Submit email" 
           />
           <p className="text-[#ff0000] mt-[-20px]">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FormEvent, useContext } from "react";
-import { To, useNavigate, useLocation } from 'react-router-dom';
+import { To, useNavigate, useLocation, Link } from 'react-router-dom';
 import { AppContextType, AppContext } from "context/AppContextProvider";
 
 const Home = () => {
@@ -50,7 +50,7 @@ const Home = () => {
             <img src='/images/icon_search.svg' alt="icon_search" className="absolute right-[15px] lg:right-[31.7px] w-[15px] lg:w-[30px] cursor-pointer" onClick={() => handleSearch(null)} />
           </form>
           <div className="flex justify-end w-full pr-[36px]">
-            <p className="text-[#828282] text-[7.32673px] lg:text-[12px] font-[400] leading-[13px] lg:leading-[22px] font-arial">Report an issue</p>
+            <Link to='/reportissue' className="text-[#828282] text-[7.32673px] lg:text-[12px] font-[400] leading-[13px] lg:leading-[22px] font-arial">Report an issue</Link>
           </div>
         </div>
         <div className="flex mt-[20px] flex-col lg:flex-row w-full lg:w-fit">

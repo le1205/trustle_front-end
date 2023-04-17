@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation  } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
@@ -359,7 +359,7 @@ const AccountTab = () => {
       }
       <div className="flex mt-[44px] lg:mt-[20px] pl-0 lg:pl-[46px] gap-[160px] lg:gap-[223px]">
         <p className="text-secondary text-[9px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] font-[400] font-arial">Accounts are not verified - <span className="underline cursor-pointer">edit</span></p>
-        <p className="text-secondary text-[9px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] font-[400] font-arial">Report an issue</p>
+        <Link to='/reportissue' className="text-secondary text-[9px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] font-[400] font-arial">Report an issue</Link>
       </div>
     </Tabs>
   )
