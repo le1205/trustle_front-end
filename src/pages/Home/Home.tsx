@@ -63,7 +63,7 @@ const Home = () => {
 
           </div>
           <div className="ml-0 lg:ml-[15px] w-full flex justify-center mt-[25px] lg:mt-0">
-            <button className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-primary text-[12.2112px] lg:text-[20px] leading-[18px] lg:leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
+            <button onClick={(e) => handleNavigate(e, "/pledge")}  className="flex justify-center items-center bg-[#F2F2F2] w-[90%] lg:w-[265px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-primary text-[12.2112px] lg:text-[20px] leading-[18px] lg:leading-[30px] font-[600] font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
               Pledge
               <img src="/images/pledge.svg" alt="pledge" className="w-[37.24px] lg:w-[61px] ml-[10px]" />
             </button>
