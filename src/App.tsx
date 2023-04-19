@@ -27,6 +27,7 @@ import { checkUserSession } from "api";
 import UpdateUserPasword from 'pages/UpdateUserPasword';
 import Generate from 'pages/Generate';
 import { useTranslation } from "react-i18next";
+import WillDoc from 'components/WillDoc';
 
 function App() {
   const { i18n } = useTranslation();
@@ -77,7 +78,8 @@ function App() {
             <Route path="/memorial" element={<Memorial />} />    
             <Route path="/city" element={<City />} />       
             <Route path="/hardware" element={<Hardware />} />  
-            <Route path="/generate" element={<Generate />} />       
+            <Route path="/generate" element={<Generate />} />      
+            <Route path="/willdoc" element={<WillDoc />} />       
           </Routes>
         </Layout>
       </BrowserRouter>

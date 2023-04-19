@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
+import WillDoc from "components/WillDoc";
+import jsPDF from 'jspdf';
 
 const Will = () => {
+  const docRef = useRef<HTMLInputElement>(null);
+
+  const handleGeneratePdf = () => {
+		const doc = new jsPDF({
+			format: 'a4',
+      orientation: 'portrait',
+			unit: 'px',
+		});
+
+		// Adding the fonts.
+		// doc.addFont(customFont, 'PlusJakartaSans', 'normal');
+    // doc.setFont('PlusJakartaSans');
+
+
+
+    if (docRef.current) {
+      const content = docRef.current;
+      doc.html(content, {
+        callback: (doc: jsPDF) => {
+          doc.save('document');
+        }
+      });
+    }
+	};
+
   return (
     <section className="pl-[42px] pr-[24px] lg:px-[128px] flex justify-center mb-[30px]">
       <div className="max-w-[1440px] w-full">
@@ -14,10 +41,10 @@ const Will = () => {
           <div className="mt-[30px]">
             <p className="text-secondary text-[18px] font-[400] leading-[22px] font-arial">Last opened:</p>
             <p className="text-secondary text-[18px] font-[400] leading-[22px] font-arial mt-[5px]">(2023-02-07 12:12)</p>
-            <div className="bg-[#F2F2F2] w-full lg:w-[573px] h-[35px] border-solid border-[1px] border-black flex justify-between items-center px-[22px] mt-[20px]">
+            <button onClick={handleGeneratePdf} className="bg-[#F2F2F2] w-full lg:w-[573px] h-[35px] border-solid border-[1px] border-black flex justify-between items-center px-[22px] mt-[20px]">
               <p className="text-black text-[18px] leading-[22px] font-arial font-[400]">Open Will</p>
               <img src="/images/icon _file.svg" alt="icon _file" className="w-[11.47px]" />
-            </div>
+            </button>
           </div>
           <div className="mt-[50px]">
             <p className="text-secondary text-[18px] font-[400] leading-[22px] font-arial">Last signed:</p>
@@ -37,6 +64,9 @@ const Will = () => {
           </div>
         </div>        
       </div>
+      <div ref={docRef}>
+        <WillDoc />
+      </div>      
     </section>
   )
 }
