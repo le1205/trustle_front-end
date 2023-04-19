@@ -19,7 +19,7 @@ const WillDoc = () => {
             <li>&bull; Tinder, Inc. (tinder.com/account(URL)</li>
             <li>&bull; ... # KEEP THE LIST GOING</li>
           </ul>
-          <p className="text-[#8BA2B1] font-[400] text-[7px] leading-[12px] mt-[5px]">I, [*Client: legal name*] with the social security number *Client: Social security number* confirm that I obtain the rightful ownership of all attached accounts (defined under section 3) and adhere Trustle in the assignment of removing all my online accounts in the event of death (defined under section 2).</p>
+          <p className="text-[#8BA2B1] font-[400] text-[7px] leading-[7px] mt-[5px]">I, [*Client: legal name*] with the social security number *Client: Social security number* confirm that I obtain the rightful ownership of all attached accounts (defined under section 3) and adhere Trustle in the assignment of removing all my online accounts in the event of death (defined under section 2).</p>
         </div>
         <div>
           <h1 className="text-black text-[10px] leading-[16px] font-[800] mt-[30px]">Section 2 - Legal Permutations</h1>
@@ -54,8 +54,9 @@ const WillDoc = () => {
       </div> 
       <div className="px-[30px] flex justify-between w-full mt-[60px] items-center">
         <div>
-          <h1 className="text-black text-[13px] leading-[19px] font-[800]">Michael Båge</h1>
+          <h1 className="text-black text-[13px] leading-[10px] font-[800]">Michael Båge</h1>
           <p className="text-[#8BA2B1] font-[400] text-[6px] leading-[7px] mt-[5px]">CEO & Founder</p>
+          <img src='/images/signature.png' alt="signature" className='w-[24px] mt-[4px]' />
         </div>
         <div className="flex items-end">
           <div className="mb-[10px]">

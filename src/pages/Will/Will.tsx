@@ -62,11 +62,11 @@ const Will = () => {
           </div>
         </div>        
       </div>
-      <div className="hidden">
+      {/* <div className="hidden"> */}
         <div ref={docRef}>
           <WillDoc />
         </div>  
-      </div>          
+      {/* </div>           */}
     </section>
   )
 }
