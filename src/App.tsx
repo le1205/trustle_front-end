@@ -1,5 +1,5 @@
 import React, {useEffect } from 'react';
-import { BrowserRouter, Route, Routes, useFetcher } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Layout from 'components/Layout';
 import Home from 'pages/Home';
@@ -80,6 +80,7 @@ function App() {
             <Route path="/hardware" element={<Hardware />} />  
             <Route path="/generate" element={<Generate />} />      
             <Route path="/willdoc" element={<WillDoc />} />       
+            <Route path="*" element={<Navigate to='/' />} />
           </Routes>
         </Layout>
       </BrowserRouter>

@@ -1,12 +1,12 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 
 const WillDoc = () => {
   return (
     <>
-      {/* <div className="px-[29px]">
-        <img src='/images/logo.svg' alt="logo" className='w-[119.8px]' />
-      </div> */}
-      <div className="mx-[40px] mt-[44px] w-full">
+      <div className="px-[29px] mt-[44px]">
+        <img src='/images/logo.png' alt="logo" className='w-[119.8px]' />
+      </div>
+      <div className="px-[40px] mt-[10px]" style={{ pageBreakAfter: 'always' }}>
         <div>
           <h1 className="text-black text-[13px] leading-[19px] font-[800]">Will</h1>
           <h1 className="text-black text-[10px] leading-[16px] font-[800] mt-[5px]">Section 1 - Power of attorney</h1>
@@ -52,14 +52,19 @@ const WillDoc = () => {
           </div>
         </div>       
       </div> 
-      <div className="px-[30px] flex justify-between w-full">
+      <div className="px-[30px] flex justify-between w-full mt-[60px] items-center">
         <div>
           <h1 className="text-black text-[13px] leading-[19px] font-[800]">Michael Båge</h1>
           <p className="text-[#8BA2B1] font-[400] text-[6px] leading-[7px] mt-[5px]">CEO & Founder</p>
         </div>
-        <div>
-          <p className="text-[#190202] font-[400] text-[6px] leading-[7px]">Anti-AGI For Profit Organisation</p>
-          <p className="text-[#190202] font-[400] text-[6px] leading-[7px] mt-[5px]">www.trustle.org</p>
+        <div className="flex items-end">
+          <div className="mb-[10px]">
+            <p className="text-[#190202] font-[400] text-[6px] leading-[7px]">Anti-AGI For Profit Organisation</p>
+            <p className="text-[#190202] font-[400] text-[6px] leading-[7px] mt-[5px]">www.trustle-beta.com</p>
+          </div>
+          <div>
+            <img src='/images/logo_icon.png' alt="logo_icon" className='w-[30px]' />
+          </div>
         </div>
       </div>
     </>

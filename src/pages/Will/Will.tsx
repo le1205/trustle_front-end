@@ -12,14 +12,12 @@ const Will = () => {
 			unit: 'px',
 		});
 
-		// Adding the fonts.
-		// doc.addFont(customFont, 'PlusJakartaSans', 'normal');
-    // doc.setFont('PlusJakartaSans');
-
-
-
+    const padding = 10;
     if (docRef.current) {
       const content = docRef.current;
+      const pageWidth = doc.internal.pageSize.getWidth();
+      content.style.width = `${pageWidth - padding * 1}px`;
+      
       doc.html(content, {
         callback: (doc: jsPDF) => {
           doc.save('document');
@@ -64,9 +62,11 @@ const Will = () => {
           </div>
         </div>        
       </div>
-      <div ref={docRef}>
-        <WillDoc />
-      </div>      
+      <div className="hidden">
+        <div ref={docRef}>
+          <WillDoc />
+        </div>  
+      </div>          
     </section>
   )
 }
