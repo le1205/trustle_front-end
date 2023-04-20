@@ -49,6 +49,21 @@ export const login = async (email: string, password: string): Promise<any> => {
   return result;
 };
 
+export const logout = async (sessionId: string): Promise<any> => {
+  let result = await fetch("https://trustle-beta.com/api/logout", {
+    method: "POST",
+    headers: {
+      sessionId: `${sessionId}`,
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+  let response = await result.json();
+  return response;
+};
+
+
 export const forgotPassword = async (email: string): Promise<any> => {
   let forgotData = {
     email: email,
@@ -102,6 +117,23 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
 
   return result;
 };
+
+export const deleteAccount = async (): Promise<any> => {
+  let result = await fetch(`https://trustle-beta.com/api/delete`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      'Content-Type': 'application/json',
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Content-Type",
+    }
+  }).then((response) => {
+    return response.json();
+  });
+
+  return result;
+}
+
 export interface SearchResult {
   title: string;
   link: string;

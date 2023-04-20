@@ -34,8 +34,8 @@ const Will = () => {
           <h1 className="text-black text-[21.61px] lg:text-[25.2545px] leading-[27px] lg:leading-[32px] font-[800] font-bold">Will</h1>
         </div>        
         <div className="pl-0 lg:pl-[14px] mt-[10px]">
-          <p className="text-black text-[19.35px] lg:text-[24.7907px] font-[800] leading-[29px] lg:leading-[37px] font-light">By signing your will, Trustle ensures that all your online accounts will be removed once you have passed away.</p>
-          <p className="text-black text-[19.35px] lg:text-[24.7907px] font-[800] leading-[29px] lg:leading-[37px] font-light mt-[30px]">Review which accounts are included in your will through visiting your account or reading your will.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular">By signing your will, Trustle ensures that all your online accounts will be removed once you have passed away.</p>
+          <p className="text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[30px]">Review which accounts are included in your will through visiting your account or reading your will.</p>
           <div className="mt-[30px]">
             <p className="text-secondary text-[18px] font-[400] leading-[22px] font-arial">Last opened:</p>
             <p className="text-secondary text-[18px] font-[400] leading-[22px] font-arial mt-[5px]">(2023-02-07 12:12)</p>

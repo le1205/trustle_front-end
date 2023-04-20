@@ -57,7 +57,7 @@ const Login = () => {
       password: "",
     },
     validationSchema: validationFormSchema,
-    onSubmit: async (values) => { console.log("values", values)
+    onSubmit: async (values) => { 
       if (
         values.email &&
         values.password &&
@@ -67,6 +67,7 @@ const Login = () => {
         setLoading(true);
         const result = await login(values.email, values.password);
         if (result.loginResult && result.loginResult.isError === false) {
+          localStorage.setItem("token", result.loginResult.accessToken);
           localStorage.setItem("name", result.loginResult.userName);
           localStorage.setItem("email", result.loginResult.email);
 
@@ -74,11 +75,12 @@ const Login = () => {
           notify(result.loginResult.message);
           setLoading(false);
           navigate("/");
-        } else if (result && result.isError === true) { console.log("result", result)
-          notify("The credentials you have entered do not match our records.")
+        } else if (result && result.isError === true) { 
+          notify(result.message)
+          console.log("result", result)
           setLoading(false);
         } else {
-          notify("The credentials you have entered do not match our records.")
+          notify("Login Failed!")
           setLoading(false);
         }
       } else {

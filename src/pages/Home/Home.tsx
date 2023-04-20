@@ -1,14 +1,12 @@
-import React, { useState, useEffect, FormEvent, useContext } from "react";
-import { To, useNavigate, useLocation, Link } from 'react-router-dom';
+import React, { useState, FormEvent, useContext } from "react";
+import { To, useNavigate, Link } from 'react-router-dom';
 import { AppContextType, AppContext } from "context/AppContextProvider";
 
 const Home = () => {
   const navigate = useNavigate();
   const [input, setInput] = useState("");
-  const [setting, setSetting] = useState(false);
-  const location = useLocation();
 
-  const { searchValue } = useContext<AppContextType>(AppContext);
+  const { searchValue, logged } = useContext<AppContextType>(AppContext);
 
   const handleNavigate = (e: { preventDefault: () => void; }, url: To) => {
     e.preventDefault();
@@ -24,10 +22,6 @@ const Home = () => {
       navigate('/search');
     }    
   }
-
-  useEffect(() => {
-    location.pathname === '/setting' ? setSetting(true) : setSetting(false);
-  }, [location.pathname])
 
   return (
     <section>
@@ -56,8 +50,8 @@ const Home = () => {
         <div className="flex mt-[20px] flex-col lg:flex-row w-full lg:w-fit">
           <div className="w-full flex justify-center">
             {
-              setting ?
-                <button onClick={(e) => handleNavigate(e, "/")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Setting <img src="/images/setting.svg" alt="setting" className="w-[25px] lg:w-[37px] inline ml-[5px]" /></button> :
+              logged ?
+                <button onClick={(e) => handleNavigate(e, "/setting")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Setting <img src="/images/setting.svg" alt="setting" className="w-[25px] lg:w-[37px] inline ml-[5px]" /></button> :
                 <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Sign up</button>
             }
 

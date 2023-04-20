@@ -23,11 +23,13 @@ import City from 'pages/City';
 import Hardware from 'pages/Hardware';
 import AppContextProvider from "context/AppContextProvider";
 import Forgot from 'pages/Forgot';
+import Setting from 'pages/Setting';
 import { checkUserSession } from "api";
 import UpdateUserPasword from 'pages/UpdateUserPasword';
 import Generate from 'pages/Generate';
 import { useTranslation } from "react-i18next";
 import WillDoc from 'components/WillDoc';
+
 
 function App() {
   const { i18n } = useTranslation();
@@ -57,7 +59,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />     
-            <Route path="/setting" element={<ReportIssue />} />        
+            <Route path="/setting" element={<Setting />} />        
             <Route path="/signup" element={<SignUp />} />        
             <Route path="/login" element={<Login />} />  
             <Route path="/forgot" element={<Forgot />} />       

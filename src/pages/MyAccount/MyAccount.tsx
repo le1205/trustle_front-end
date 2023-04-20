@@ -4,7 +4,7 @@ import AccountWMC from "components/AccountWMC";
 
 const MyAccount = () => {
   return (
-    <section className="px-[25px] lg:px-[50px] xl:pl-[130px] xl:pr-[100px] flex justify-center mt-[20px] lg:mt-0">
+    <section className="px-[25px] lg:px-[50px] xl:pl-[130px] xl:pr-[100px] flex justify-center mt-[20px] lg:mt-0 mb-0 lg:mb-[100px]">
       <div className="max-w-[1440px] w-full">
         <div className="flex gap-[13px] items-end">
           <img src="/images/account.svg" alt="account" className="w-[61.7px] lg:w-[72.11px]" />

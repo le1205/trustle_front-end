@@ -15,7 +15,7 @@ export interface AppContextType {
   search: string
 }
 
-const user = localStorage.getItem('name');
+const user = localStorage.getItem('token');
 const initialState: AppState = user
   ? {
       logged: true,

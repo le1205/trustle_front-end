@@ -17,7 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     location.pathname === '/' ? setHome(true) : setHome(false);
     location.pathname === '/search' || location.pathname === '/accountselect' ? setSearch(true) : setSearch(false);
-    location.pathname === '/' || location.pathname === '/setting' || location.pathname === '/signup' || location.pathname === '/login'
+    location.pathname === '/' || location.pathname === '/signup' || location.pathname === '/login'
     ? setCenter(true) : setCenter(false)
   }, [location.pathname])
 
