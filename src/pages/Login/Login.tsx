@@ -14,13 +14,13 @@ const Login = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [passwordShow, setPasswordShow] = useState<boolean>(false);
 
-  const { handleLogin, logged, userName } = useContext<AppContextType>(AppContext);
+  const { handleLogin, logged, token } = useContext<AppContextType>(AppContext);
 
   useEffect(() => {
-    if (logged && userName !== null) {
+    if (logged && token !== '') {
       navigate("/");
     }
-  }, [logged, userName, navigate]); 
+  }, [logged, token, navigate]); 
   
   const handleNavigate = (e: { preventDefault: () => void; }, url: To) => {
     e.preventDefault();
@@ -71,13 +71,12 @@ const Login = () => {
           localStorage.setItem("name", result.loginResult.userName);
           localStorage.setItem("email", result.loginResult.email);
 
-          handleLogin(result.loginResult.userName);
+          handleLogin(result.loginResult.accessToken);
           notify(result.loginResult.message);
           setLoading(false);
           navigate("/");
         } else if (result && result.isError === true) { 
-          notify(result.message)
-          console.log("result", result)
+          notify(result.message);
           setLoading(false);
         } else {
           notify("Login Failed!")

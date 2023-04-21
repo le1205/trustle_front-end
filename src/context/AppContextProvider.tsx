@@ -3,15 +3,15 @@ import AppReducer, { AppAction, HANDLE_LOG_IN, HANDLE_LOG_OUT, HANDLE_SEARCH_VAL
 
 interface AppState {
   logged: boolean;
-  userName: string;
+  token: string;
   search: string
 }
 export interface AppContextType {
-  handleLogin: (username: string) => void;
+  handleLogin: (token: string) => void;
   handleLogout: () => void;
   searchValue: (input: string) => void;
   logged: boolean;
-  userName: string;
+  token: string;
   search: string
 }
 
@@ -19,12 +19,12 @@ const user = localStorage.getItem('token');
 const initialState: AppState = user
   ? {
       logged: true,
-      userName: user,
+      token: user,
       search: '',
     }
   : {
       logged: false,
-      userName: '',
+      token: '',
       search: '',
     };
 
@@ -33,7 +33,7 @@ export const AppContext = createContext<AppContextType>({
   handleLogout: () => {},
   searchValue: () => {},
   logged: false,
-  userName: '',
+  token: '',
   search: ''
 });
 
@@ -44,10 +44,10 @@ interface AppContextProviderProps {
 const AppContextProvider: React.FC<AppContextProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  const handleLogin = (username: string) => {
+  const handleLogin = (token: string) => {
     dispatch({
       type: HANDLE_LOG_IN,
-      username,
+      token,
     });
   };
 

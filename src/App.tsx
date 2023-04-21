@@ -29,6 +29,7 @@ import UpdateUserPasword from 'pages/UpdateUserPasword';
 import Generate from 'pages/Generate';
 import { useTranslation } from "react-i18next";
 import WillDoc from 'components/WillDoc';
+import ChangePassword from 'pages/ChangePassword';
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
       const result = await checkUserSession();
       if (result && result.isError === true) {
         window.localStorage.clear();
-        notify(result.message);
+        // notify(result.message);
       }
     };  
     checkSession();
@@ -63,7 +64,8 @@ function App() {
             <Route path="/signup" element={<SignUp />} />        
             <Route path="/login" element={<Login />} />  
             <Route path="/forgot" element={<Forgot />} />       
-            <Route path="/forgot/:id" element={<UpdateUserPasword />} />        
+            <Route path="/changepassword" element={<ChangePassword />} />       
+            <Route path="/forgot/:id" element={<UpdateUserPasword />} />     
             <Route path="/search" element={<Search />} />          
             <Route path="/accountselect" element={<AccountSelect />} />          
             <Route path="/reportissue" element={<ReportIssue />} />         

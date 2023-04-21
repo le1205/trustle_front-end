@@ -11,7 +11,7 @@ export const registerUser = async (
     password: password,
   }; 
   let result = await fetch(
-    "https://trustle-beta.com/api/signup",
+    "http://localhost:4000/api/signup",
     {
       method: "POST",
       body: JSON.stringify(registerData),
@@ -33,7 +33,7 @@ export const login = async (email: string, password: string): Promise<any> => {
     email: email,
     password: password,
   };
-  let result = await fetch("https://trustle-beta.com/api/login", {
+  let result = await fetch("http://localhost:4000/api/login", {
     method: "POST",
     body: JSON.stringify(loginData),
     headers: {
@@ -49,11 +49,10 @@ export const login = async (email: string, password: string): Promise<any> => {
   return result;
 };
 
-export const logout = async (sessionId: string): Promise<any> => {
-  let result = await fetch("https://trustle-beta.com/api/logout", {
+export const logout = async (): Promise<any> => {
+  let result = await fetch("http://localhost:4000/api/logout", {
     method: "POST",
     headers: {
-      sessionId: `${sessionId}`,
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "Content-Type",
@@ -69,7 +68,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
     email: email,
   };
   let result = await fetch(
-    "https://trustle-beta.com/api/forgetPassword",
+    "http://localhost:4000/api/forgetPassword",
     {
       method: "POST",
       body: JSON.stringify(forgotData),
@@ -87,7 +86,16 @@ export const forgotPassword = async (email: string): Promise<any> => {
 
 export const checkUserSession = async (): Promise<any> => {
   const result = await fetch(
-    "https://trustle-beta.com/api/checkUserSession"
+    "http://localhost:4000/api/checkUserSession",
+    {
+      method: "GET",
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
   ).then((response: Response) => {
     return response.json();
   });
@@ -101,7 +109,7 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
   };
 
   const result = await fetch(
-    `https://trustle-beta.com/api/updateNewPassword/${tokenParam}`,
+    `http://localhost:4000/api/updateNewPassword/${tokenParam}`,
     {
       method: "PUT",
       body: JSON.stringify(updatePasswordData),
@@ -118,10 +126,35 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
   return result;
 };
 
+export const changePassword = async (oldPassword: string, newPassword: string): Promise<any> => {
+  const passwordData = {
+    oldPassword: oldPassword,
+    newPassword: newPassword
+  };
+  console.log("passwordData", passwordData)
+  const result = await fetch(
+    `http://localhost:4000/api/changepassword`,
+    {
+      method: "PUT",
+      body: JSON.stringify(passwordData),
+      headers: {        
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  ).then((response) => {
+    return response.json();
+  });
+
+  return result;
+};
+
 export const deleteAccount = async (): Promise<any> => {
-  let result = await fetch(`https://trustle-beta.com/api/delete`, {
+  let result = await fetch(`http://localhost:4000/api/delete`, {
     method: 'DELETE',
-    headers: {
+    headers: {     
       'Authorization': `Bearer ${localStorage.getItem('token')}`,
       'Content-Type': 'application/json',
       "Access-Control-Allow-Origin": "*",
@@ -165,7 +198,7 @@ export const GenerateUsernames = async (enNames: string[], separators: string[])
   }; 
 
   let result = await fetch(
-    "https://trustle-beta.com/api/generate",
+    "http://localhost:4000/api/generate",
     {
       method: "POST",
       body: JSON.stringify(data),

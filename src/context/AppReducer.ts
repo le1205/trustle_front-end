@@ -4,7 +4,7 @@ export const HANDLE_SEARCH_VALUE = 'HANDLE_SEARCH_VALUE';
 
 interface HandleLoginAction {
   type: typeof HANDLE_LOG_IN;
-  username: string;
+  token: string;
 }
 
 interface HandleLogoutAction {
@@ -20,7 +20,7 @@ export type AppAction = HandleLoginAction | HandleLogoutAction | HandleSearchVal
 
 interface AppState {
   logged: boolean;
-  userName: string;
+  token: string;
   search: string;
 }
 
@@ -30,13 +30,13 @@ const AppReducer = (state: AppState, action: AppAction): AppState => {
       return {
         ...state,
         logged: true,
-        userName: action.username,
+        token: action.token,
       };
     case HANDLE_LOG_OUT:
       return {
         ...state,
         logged: false,
-        userName: "",
+        token: "",
       };
     case HANDLE_SEARCH_VALUE:
       return {
