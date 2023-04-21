@@ -33,16 +33,13 @@ const Forgot = () => {
         setLoading(true);
         const result = await forgotPassword(values.email);
         if (result && !result.isError) {
-          setResponseError(
-            "We've sent an email to your email address with a link to reset your password. If you don't receive an email, please check your spam folder or try again."
-          );
+          setResponseError(result.message);
           setLoading(false);
-          // navigate("/");
         } else if (result && result.isError === true) {
-          setResponseError("We can't find a user with that email address.");
+          setResponseError(result.message);
           setLoading(false);
         } else {
-          setResponseError("We can't find a user with that email address.");
+          setResponseError("Update Failed!");
           setLoading(false);
         }
       } else {

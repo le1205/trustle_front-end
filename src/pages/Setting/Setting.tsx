@@ -40,12 +40,6 @@ const Setting = () => {
     toast(message);
   }
 
-  // useEffect(() => {
-  //   if (!logged && token === '') {
-  //     navigate("/login");
-  //   }
-  // }, [logged, token, navigate]);
-
   return (
     <section className="pl-[42px] pr-[24px] lg:px-[128px] mb-[30px]">
       <div className="max-w-[1440px] w-full">

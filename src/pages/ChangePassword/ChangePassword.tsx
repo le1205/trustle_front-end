@@ -77,7 +77,7 @@ const ChangePassword = () => {
       repassword: "",
     },
     validationSchema: validationSchemaForm,
-    onSubmit: async (values) => { console.log("values", values)
+    onSubmit: async (values) => { 
       if (
         values.oldpassword &&
         values.newpassword &&
@@ -91,7 +91,7 @@ const ChangePassword = () => {
         const result = await changePassword(
           values.oldpassword,
           values.newpassword
-        );console.log("result", result)
+        );
         if (result.result && result.result.isError === false) { 
           notify(result.result.message);
           setLoading(false);

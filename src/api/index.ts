@@ -11,7 +11,7 @@ export const registerUser = async (
     password: password,
   }; 
   let result = await fetch(
-    "http://localhost:4000/api/signup",
+    "https://trustle-beta.com/api/signup",
     {
       method: "POST",
       body: JSON.stringify(registerData),
@@ -33,7 +33,7 @@ export const login = async (email: string, password: string): Promise<any> => {
     email: email,
     password: password,
   };
-  let result = await fetch("http://localhost:4000/api/login", {
+  let result = await fetch("https://trustle-beta.com/api/login", {
     method: "POST",
     body: JSON.stringify(loginData),
     headers: {
@@ -50,7 +50,7 @@ export const login = async (email: string, password: string): Promise<any> => {
 };
 
 export const logout = async (): Promise<any> => {
-  let result = await fetch("http://localhost:4000/api/logout", {
+  let result = await fetch("https://trustle-beta.com/api/logout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
     email: email,
   };
   let result = await fetch(
-    "http://localhost:4000/api/forgetPassword",
+    "https://trustle-beta.com/api/forgetPassword",
     {
       method: "POST",
       body: JSON.stringify(forgotData),
@@ -86,7 +86,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
 
 export const checkUserSession = async (): Promise<any> => {
   const result = await fetch(
-    "http://localhost:4000/api/checkUserSession",
+    "https://trustle-beta.com/api/checkUserSession",
     {
       method: "GET",
       headers: {
@@ -109,7 +109,7 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
   };
 
   const result = await fetch(
-    `http://localhost:4000/api/updateNewPassword/${tokenParam}`,
+    `https://trustle-beta.com/api/updateNewPassword/${tokenParam}`,
     {
       method: "PUT",
       body: JSON.stringify(updatePasswordData),
@@ -126,14 +126,33 @@ export const updateNewPassword = async (password: string, tokenParam: string): P
   return result;
 };
 
+export const verifyAccount = async (tokenParam: string): Promise<any> => {
+  const result = await fetch(
+    `https://trustle-beta.com/api/verifyAccount/${tokenParam}`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  ).then((response) => {
+    localStorage.setItem("sid", response.headers.get("Session-Id")!);
+    return response.json();
+  });
+
+  return result;
+};
+
 export const changePassword = async (oldPassword: string, newPassword: string): Promise<any> => {
   const passwordData = {
     oldPassword: oldPassword,
     newPassword: newPassword
   };
-  console.log("passwordData", passwordData)
+
   const result = await fetch(
-    `http://localhost:4000/api/changepassword`,
+    `https://trustle-beta.com/api/changepassword`,
     {
       method: "PUT",
       body: JSON.stringify(passwordData),
@@ -152,7 +171,7 @@ export const changePassword = async (oldPassword: string, newPassword: string): 
 };
 
 export const deleteAccount = async (): Promise<any> => {
-  let result = await fetch(`http://localhost:4000/api/delete`, {
+  let result = await fetch(`https://trustle-beta.com/api/delete`, {
     method: 'DELETE',
     headers: {     
       'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -178,7 +197,7 @@ export const UseGoogleSearch = async (term: string, numResults: number, pageNum:
     `https://www.googleapis.com/customsearch/v1?key=${process.env.REACT_APP_API_KEY}&cx=${process.env.REACT_APP_CONTEXT_KEY}&q=${term}&num=${numResults}&start=${pageNum}`
   )
     .then(response => response.json())
-    .then(result => { console.log("result", result)
+    .then(result => { 
       const searchResults: SearchResult[] = result.items?.map((item: any) => ({
         title: item.title,
         link: item.link,
@@ -198,7 +217,7 @@ export const GenerateUsernames = async (enNames: string[], separators: string[])
   }; 
 
   let result = await fetch(
-    "http://localhost:4000/api/generate",
+    "https://trustle-beta.com/api/generate",
     {
       method: "POST",
       body: JSON.stringify(data),

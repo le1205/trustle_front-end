@@ -30,6 +30,7 @@ import Generate from 'pages/Generate';
 import { useTranslation } from "react-i18next";
 import WillDoc from 'components/WillDoc';
 import ChangePassword from 'pages/ChangePassword';
+import VerifyEmail from 'pages/VerifyEmail';
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
             <Route path="/setting" element={<Setting />} />        
             <Route path="/signup" element={<SignUp />} />        
             <Route path="/login" element={<Login />} />  
+            <Route path="/login/:id" element={<VerifyEmail />} />  
             <Route path="/forgot" element={<Forgot />} />       
             <Route path="/changepassword" element={<ChangePassword />} />       
             <Route path="/forgot/:id" element={<UpdateUserPasword />} />     

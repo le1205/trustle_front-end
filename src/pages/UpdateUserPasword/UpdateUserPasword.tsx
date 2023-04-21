@@ -1,7 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
-import { To, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { Formik } from "formik";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import { updateNewPassword } from "api";
