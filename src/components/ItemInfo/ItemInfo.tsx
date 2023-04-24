@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const ItemInfo = () => {
   return (
@@ -16,7 +17,7 @@ const ItemInfo = () => {
         </div>
         <div className="flex px-[11px] lg:px-[16px] justify-between mt-[13px] lg:mt-[20px]">
           <h1 className="text-[#333333] text-[20px] lg:text-[30px] leading-[15px] lg:leading-[22px] font-[400] font-extraBold">Michael Båge</h1>
-          <img src='/images/share_link.svg' alt="share_link" />
+          <Link to='/accountselect'><img src='/images/share_link.svg' alt="share_link" /></Link>
         </div>
         <div className="w-full h-[1px] border-b-[1px] border-solid border-gray mt-[20px]"></div>
         <div className="px-[11px] lg:px-[16px] py-[13px] lg:py-[20px]">
@@ -27,7 +28,7 @@ const ItemInfo = () => {
         </div>
       </div>
       <div>
-        <p className="text-right text-[#828282] text-[8px] lg:text-[12px] leading-[15px] lg:leading-[22px] font-[400] font-medium">Report an issue</p>
+        <Link to='/reportissue' className="text-right text-[#828282] text-[8px] lg:text-[12px] leading-[15px] lg:leading-[22px] font-[400] font-medium">Report an issue</Link>
       </div>  
     </>
   )

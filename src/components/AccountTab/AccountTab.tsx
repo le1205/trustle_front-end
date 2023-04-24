@@ -96,7 +96,7 @@ const AccountTab = () => {
         <div className="flex flex-col gap-[27px] lg:gap-[43px]">
           <div className="flex items-center">
             <div className="w-[17px] lg:w-[23px] flex justify-center items-center">
-              <img src="/images/spotify.svg" alt="spotify" className="w-[12px] lg:w-[16px]" />
+              <img src="/images/spotify.svg" alt="spotify" className="w-[17px] lg:w-[22px]" />
             </div>            
             <p className="text-black text-[11px] lg:text-[18px] leading-[14px] lg:leading-[22px] font-arial ml-[15px] lg:ml-[23px]">2 accounts identified: <span className="underline">michael.bage</span>, <span className="underline">michaelbage</span></p>
           </div>

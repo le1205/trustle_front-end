@@ -63,14 +63,14 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="mt-[85px] mb-[50px] hidden lg:block w-[518.55px] px-[15px] lg:px-[12px] rounded-[11.5234px] py-[5px] bg-gray-200 bg-opacity-40">
+        <div className="mt-[85px] w-[90%] mb-[129px] lg:w-[518.55px] px-[15px] lg:px-[12px] rounded-[11.5234px] py-[5px] bg-gray-200 bg-opacity-40">
           <p className="text-black text-[15.3249px] leading-[23px] font-[400]">In our <span className="text-secondary">beta v.1</span> you can find out all there is to know about your friends and family online presence through searching their name</p>
         </div>
-        <div className="lg:hidden w-[90%] mx-auto mt-[106px] mb-[129px] gap-[20px] flex flex-col px-[15px] py-[5px] rounded-[11.5234px] bg-gray-200 bg-opacity-40">
+        {/* <div className="lg:hidden w-[90%] mx-auto mt-[106px] mb-[129px] gap-[20px] flex flex-col px-[15px] py-[5px] rounded-[11.5234px] bg-gray-200 bg-opacity-40">
           <div className="text-black font-[800] text-[13.2989px] leading-[20px] font-medium"><span>Trustle is a collective database of all online accounts in the world.</span> <img className="inline w-[25px]" src="/images/Mask_1.svg" alt="Mask_1" /></div>
           <div className="text-black font-[800] text-[13.2989px] leading-[20px] font-medium">In our <span className="text-secondary">beta v.1</span> version you can search any name to locate all their online activity and more. <img className="inline w-[20px]" src="/images/Mask_2.svg" alt="Mask_2" /></div>
           <div className="text-black font-[800] text-[13.2989px] leading-[20px] font-medium">Above this, you can ensure that any unwanted online activity is removed by creating your own account. <img src="/images/Mask_3.svg" className="inline w-[20px]" alt="Mask_3" /></div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

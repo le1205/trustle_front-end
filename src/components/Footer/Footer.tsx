@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 type FooterProps = {
-  search: boolean;
+  account: boolean;
 }
 
-const Footer = ({ search }: FooterProps) => {
+const Footer = ({ account }: FooterProps) => {
   return (
     <section>
       <div className="h-[55px] lg:h-[122px] w-full">
         <div className="absolute bottom-0 w-full">     
           <div className="px-[15px] lg:px-[120px] flex justify-center">
             <div className="max-w-[1440px] w-full">
-              <p className={`${search ? 'hidden' : 'block'}  text-[#828282] text-[8px] lg:text-[12px] font-[400] leading-[15px] lg:leading-[22px] font-medium`}>© Trustle 2023 - Beta v.1</p>  
+              <p className={`${account ? 'hidden' : 'block'}  text-[#828282] text-[8px] lg:text-[12px] font-[400] leading-[15px] lg:leading-[22px] font-medium`}>© Trustle 2023 - Beta v.1</p>  
             </div>            
           </div>         
           <div className="bg-[#F2F2F2] w-full px-[15px] lg:px-[120px] py-[19px] lg:py-[37.25px] ">
