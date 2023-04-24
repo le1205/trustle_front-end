@@ -43,7 +43,7 @@ const Setting = () => {
   return (
     <section className="pl-[42px] pr-[24px] lg:px-[128px] mb-[30px]">
       <div className="max-w-[1440px] w-full">
-        <h1 className="text-black text-[21.61px] lg:text-[32.4043px] leading-[27px] lg:leading-[49px] font-[400] font-regular">Setting</h1>
+        <h1 className="text-black text-[21.61px] lg:text-[32.4043px] leading-[27px] lg:leading-[49px] font-[400] font-regular">Settings</h1>
         <div className="flex flex-col pl-0 lg:pl-[14px]">
           {
             logged && token !== '' ?
@@ -52,7 +52,11 @@ const Setting = () => {
                 <button onClick={deleteHandler} className="w-fit text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[20px]">Delete account</button>
                 <Link to='/changepassword' className="w-fit text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[20px]">Change password</Link>
               </>  :
-              <Link to='/signup' className="w-fit text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[20px]">Change account</Link>
+              <>
+                <Link to='/signup' className="w-fit text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[20px]">Create account</Link>
+                <Link to='/login' className="w-fit text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[20px]">Log in</Link>
+              </>
+              
           }        
           
           <Link to='/reportissue' className="w-fit text-black text-[19.35px] lg:text-[24.7907px] font-[400] leading-[29px] lg:leading-[37px] font-regular mt-[20px]">Report issue</Link>
