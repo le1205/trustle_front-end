@@ -40,6 +40,7 @@ function App() {
     const checkSession = async () => {
       const result = await checkUserSession();
       if (result && result.isError === true) {
+        console.log("result", result)
         window.localStorage.clear();
         // notify(result.message);
       }

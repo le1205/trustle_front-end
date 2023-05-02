@@ -173,7 +173,7 @@ const Login = () => {
             <div className="mt-[40px]">
               <img src="/images/signup_logo.svg" alt="signup_logo" className="w-[126.1px]" />
             </div>
-            <div className="w-[580px] text-center text-[#8BA2B1] text-[21.3176px] font-[400] leading-[32px] font-regular mt-[75px]">
+            <div className="w-[580px] text-center text-[#8BA2B1] text-[21.3176px] font-[400] leading-[32px] font-regular mt-[10px]">
               {responseError}
             </div>
           </div>

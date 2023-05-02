@@ -1,9 +1,14 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
+import { useNavigate } from 'react-router-dom';
 import WillDoc from "components/WillDoc";
 import jsPDF from 'jspdf';
+import { toast } from "react-toastify";
+import { AppContext, AppContextType } from "context/AppContextProvider";
 
 const Will = () => {
+  const navigate = useNavigate();
   const docRef = useRef<HTMLInputElement>(null);
+  const { logged, token } = useContext<AppContextType>(AppContext);
 
   const handleGeneratePdf = () => {
 		const doc = new jsPDF({
@@ -20,11 +25,22 @@ const Will = () => {
       
       doc.html(content, {
         callback: (doc: jsPDF) => {
-          doc.save('document');
+          doc.save(`Will - ${localStorage.getItem('name')}`);
         }
       });
     }
 	};
+console.log("logged", logged, token)
+  useEffect(() => {
+    if (!logged && token === '') {
+      notify("You must login!");
+      navigate("/login");
+    }
+  }, [logged, token, navigate]);
+
+  const notify = (message: string): void => {
+    toast(message);
+  }
 
   return (
     <section className="pl-[42px] pr-[24px] lg:px-[128px] flex justify-center mb-[30px]">

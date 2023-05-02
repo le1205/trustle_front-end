@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PowerUps from "components/Powerups/Powerups";
-import { useLocation  } from "react-router-dom";
 import { AppContext, AppContextType } from "context/AppContextProvider";
 
 type NavbarProps = {
@@ -20,8 +19,6 @@ const Navbar = ({ home, account, powerUps, setPowerUps }: NavbarProps) => {
     e.preventDefault();
   }
 
-  console.log("serach ", search)
-
   return (
     <header className="relative">
       <nav className="h-[70px] lg:h-[100px] px-[20px] md:px-[42px] flex items-center w-full">
@@ -38,7 +35,7 @@ const Navbar = ({ home, account, powerUps, setPowerUps }: NavbarProps) => {
                 <img src='/images/google_search_voice.svg' alt="google_search_voice" className="w-[14px] cursor-pointer" />
                 <img src='/images/google_search.svg' alt="google_search" className="w-[14.86px] cursor-pointer" />
               </div>  
-              <p className={`absolute ${search ? 'hidden' : 'block'} left-9 bottom-[-30px] text-secondary text-[18px] font-[400] font-arial`}>Search any name or username to view the results</p>       
+              <p className={`absolute ${location.pathname === '/accountselect' ? 'hidden' : (search ? 'hidden' : 'block')} left-9 bottom-[-30px] text-secondary text-[18px] font-[400] font-arial`}>Search any name or username to view the results</p>       
             </form>
           </div>
         
@@ -62,7 +59,7 @@ const Navbar = ({ home, account, powerUps, setPowerUps }: NavbarProps) => {
           <img src='/images/google_search_voice.svg' alt="google_search_voice" className="w-[14px] cursor-pointer" />
           <img src='/images/google_search.svg' alt="google_search" className="w-[14.86px] cursor-pointer" />
         </div>      
-        <p className={`absolute ${search ? 'hidden' : 'block'} left-1 top-[50px] text-secondary text-[13px] font-[400] font-arial`}>Search any name or username to view the results</p>                 
+        {/* <p className={`absolute ${location.pathname === '/accountselect' ? 'hidden' : (search ? 'hidden' : 'block')} left-1 top-[50px] text-secondary text-[13px] font-[400] font-arial`}>Search any name or username to view the results</p>                  */}
       </div>
       
       <PowerUps powerUps={powerUps} setPowerUps={setPowerUps} />

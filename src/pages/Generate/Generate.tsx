@@ -43,9 +43,9 @@ const Generate = () => {
             return name;
           })
           
-          const separators: string[] = ['', '.', '_', 'both'];
+          const separators: string[] = ["", ".", "_", "both"];
           let finalResult = await GenerateUsernames(enNames, separators)          
-          
+          console.log("finalResult", finalResult)
           if (finalResult && finalResult.isError === false) {
             setLoading(false);            
             setResult(finalResult.finalResult);
