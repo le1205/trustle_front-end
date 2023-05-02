@@ -30,7 +30,7 @@ const Will = () => {
       });
     }
 	};
-console.log("logged", logged, token)
+
   useEffect(() => {
     if (!logged && token === '') {
       notify("You must login!");
