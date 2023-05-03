@@ -51,7 +51,7 @@ const Home = () => {
           <div className="w-full flex justify-center">
             {
               logged ?
-                <button onClick={(e) => handleNavigate(e, "/setting")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Setting <img src="/images/setting.svg" alt="setting" className="w-[25px] lg:w-[37px] inline ml-[5px]" /></button> :
+                <button onClick={(e) => handleNavigate(e, "/settings")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Setting <img src="/images/setting.svg" alt="setting" className="w-[25px] lg:w-[37px] inline ml-[5px]" /></button> :
                 <button onClick={(e) => handleNavigate(e, "/signup")} className="bg-[#190202] w-[90%] lg:w-[246px] h-[36px] lg:h-[59px] rounded-[30px] lg:rounded-[50px] text-[#FBFBFB] text-[12.2112px] lg:text-[20px] leading-[15px] lg:leading-[25px] transition-[shadow] duration-500 font-[800] ease-linear font-bold hover:shadow-[0_4px_15px_rgba(0,0,0,0.3)]">Sign up</button>
             }
 

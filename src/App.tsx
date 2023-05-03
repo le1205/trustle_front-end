@@ -62,7 +62,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />     
-            <Route path="/setting" element={<Setting />} />        
+            <Route path="/settings" element={<Setting />} />        
             <Route path="/signup" element={<SignUp />} />        
             <Route path="/login" element={<Login />} />  
             <Route path="/login/:id" element={<VerifyEmail />} />  
