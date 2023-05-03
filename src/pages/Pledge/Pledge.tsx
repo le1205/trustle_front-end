@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Viewer from 'react-viewer';
 
 const Pledge = () => {
+  const [visibleLeft, setVisibleLeft] = useState<boolean>(false);
+  const [visibleRight, setVisibleRight] = useState<boolean>(false);
+
   return (
     <section className="px-[33px] lg:px-[121px] mt-[20px] lg:mt-0">
       <div className="max-w-[1440px]">
@@ -36,12 +40,22 @@ const Pledge = () => {
             <div className="flex h-[118.26px] lg:h-[177px]">
               <div className="w-[129px] relative lg:w-[194px] border-solid border-[1px] border-black flex justify-center items-center">
                 <img src='/images/tshirt_left.svg' alt="tshirt_left" className="w-[126.13px] lg:w-[188.78px]" />
-                <img src="/images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
+                <img src="/images/expand.svg" alt="expand" onClick={() => { setVisibleLeft(true) }} className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
               </div>
+              <Viewer
+                visible={visibleLeft}
+                onClose={() => { setVisibleLeft(false); } }
+                images={[{src: '/images/tshirt_left.svg', alt: 'tshirt_left'}]}
+              />
               <div className="w-[129px] relative lg:w-[194px] border-l-0 border-solid border-[1px] border-black flex justify-center items-center">
                 <img src='/images/tshirt_right.svg' alt="tshirt_right" className="w-[129.05px] lg:w-[193.14px]" />
-                <img src="/images/expand.svg" alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />
+                <img src="/images/expand.svg" onClick={() => { setVisibleRight(true) }} alt="expand" className="w-[10px] absolute cursor-pointer top-[7px] right-[7px]" />                
               </div>
+              <Viewer
+                visible={visibleRight}
+                onClose={() => { setVisibleRight(false); } }
+                images={[{src: '/images/tshirt_right.svg', alt: 'tshirt_right'}]}
+              />
             </div>
             <div className="w-[258px] lg:w-[388px] items-center bg-[#F2F2F2] border-t-0 border-solid border-[1px] border-black h-[46px] flex justify-around">
               <select className="outline-none bg-white ring-0 w-[71.49px] lg:w-[107px] h-[26.73px] lg:h-[40px] border-solid border-[1px] border-black text-black text-[12px] lg:text-[18px] font-[400] font-arial leading-[14px] lg:leading-[21px] px-[4px] lg:px-[17px]">

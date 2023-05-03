@@ -6,13 +6,14 @@ import 'react-tabs/style/react-tabs.css';
 const AccountTab = () => {
   const location = useLocation();
   const [ account, setAccount ] = useState<boolean>(false);
+  const [tabIndex, setTabIndex] = useState<number>(0);
 
   useEffect(() => {
     location.pathname === '/account' ? setAccount(true) : setAccount(false);
-  }, [location.pathname])
+  }, [location.pathname]);
 
   return (
-    <Tabs>
+    <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
       <TabList>
         <Tab><p className="text-[10px] lg:text-[15px] leading-[16px] lg:leading-[22px]">Social</p></Tab>
         <Tab><p className="text-[10px] lg:text-[15px] leading-[16px] lg:leading-[22px]">Creative</p></Tab>
@@ -349,9 +350,9 @@ const AccountTab = () => {
       {
         account &&  <TabPanel>
                       <div className="flex gap-[26px] pl-[32px] lg:pl-[46px]">
-                        <p className="text-secondary font-arial font-[400] text-[10.3668px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] underline cursor-pointer">Clear</p>
-                        <p className="text-secondary font-arial font-[400] text-[10.3668px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] underline cursor-pointer">Undo</p>
-                        <p className="text-secondary font-arial font-[400] text-[10.3668px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] underline cursor-pointer">Verify all</p>
+                        <p onClick={(e) => setTabIndex(0)} className="text-secondary font-arial font-[400] text-[10.3668px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] underline cursor-pointer">Clear</p>
+                        <p onClick={(e) => setTabIndex(0)} className="text-secondary font-arial font-[400] text-[10.3668px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] underline cursor-pointer">Undo</p>
+                        <p onClick={(e) => setTabIndex(0)} className="text-secondary font-arial font-[400] text-[10.3668px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] underline cursor-pointer">Verify all</p>
                       </div>
                       <div className="flex flex-col gap-[27px] lg:gap-[43px] mt-[10px]">
                         <div className="flex items-center">
@@ -412,7 +413,7 @@ const AccountTab = () => {
                     </TabPanel>
       }
       <div className="flex mt-[44px] lg:mt-[20px] pl-0 lg:pl-[46px] justify-between w-full lg:justify-start lg:gap-[223px]">
-        <p className="text-secondary text-[9px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] font-[400] font-arial">Accounts are not verified - <span className="underline cursor-pointer">edit</span></p>
+        <p className={`text-secondary ${account ? 'visible' : 'invisible'} text-[9px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] font-[400] font-arial`}>Accounts are not verified - <span onClick={(e) => setTabIndex(7)} className="underline cursor-pointer">edit</span></p>
         <Link to='/reportissue' className="text-secondary text-[9px] lg:text-[12.6272px] leading-[9px] lg:leading-[11px] font-[400] font-arial">Report an issue</Link>
       </div>
     </Tabs>

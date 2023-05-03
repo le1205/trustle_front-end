@@ -29,7 +29,7 @@ const Search = () => {
                 <p className="text-[#333333] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial mt-[5px]">+1,000 connected accounts</p>
               </div>
               <div className="mt-[8px] lg:mt-[15px] w-[373.25px] lg:w-[523px]">
-                <div className="flex justify-between">
+                <div className="flex justify-between mt-[30px]">
                   <div className="w-[158.08px] lg:w-[221px]">
                     <h1 className="text-primary tex-[15.7006px] lg:text-[22px] leading-[16px] lg:leading-[22px] font-[700] font-arial">Snapchat</h1>
                     <p className="text-[#333333] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial mt-[10px]">3 accounts</p>
@@ -39,7 +39,7 @@ const Search = () => {
                     <p className="text-[#333333] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial mt-[10px]">1 account, 2 business account</p>
                   </div>
                 </div>
-                <div className="flex justify-between mt-[19px]">
+                <div className="flex justify-between mt-[30px]">
                   <div className="w-[158.08px] lg:w-[221px]">
                     <h1 className="text-primary tex-[15.7006px] lg:text-[22px] leading-[16px] lg:leading-[22px] font-[700] font-arial">Instagram</h1>
                     <p className="text-[#333333] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial mt-[10px]">1 public account, 2 private accounts</p>
@@ -50,7 +50,7 @@ const Search = () => {
                   </div>
                 </div>
               </div>
-              <div className="mt-[35px] lg:mt-[21px]">
+              <div className="mt-[25px] lg:mt-[10px]">
                 <h1 className="text-primary tex-[15.7006px] lg:text-[22px] leading-[16px] lg:leading-[22px] font-[700] font-arial">Michael Bage - 33 years old, Marrakesh, Morocco</h1>
                 <p className="text-[#333333] text-[9.99129px] lg:text-[14px] leading-[16px] lg:leading-[22px] font-[400] font-arial mt-[5px]">+100 connected accounts</p>
               </div>
