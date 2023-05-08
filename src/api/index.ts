@@ -99,8 +99,27 @@ export const checkUserSession = async (): Promise<any> => {
   ).then((response: Response) => {
     return response.json();
   });
+};
 
-  return result;
+export const verify = async (email: string): Promise<any> => {
+  console.log(email)
+  let forgotData = {
+    email: email,
+  };
+  const result = await fetch(
+    "https://trustle-beta.com/api/verify",
+    {
+      method: "POST",
+      body: JSON.stringify(forgotData),
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  ).then((response: Response) => {
+    return response.json();
+  });
 };
 
 export const updateNewPassword = async (password: string, tokenParam: string): Promise<any> => {

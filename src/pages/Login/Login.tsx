@@ -3,7 +3,7 @@ import { Link, To, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { login } from "api";
+import { login, verify } from "api";
 import { AppContext } from "context/AppContextProvider";
 
 type AppContextType = typeof AppContext extends React.Context<infer T> ? T : never;
@@ -169,14 +169,16 @@ const Login = () => {
               </button>
             </div>
           </form> :
-          <div className="flex justify-center flex-col items-center">
+          <form className="flex justify-center flex-col items-center">
             <div className="mt-[40px]">
               <img src="/images/signup_logo.svg" alt="signup_logo" className="w-[126.1px]" />
             </div>
             <div className="w-[580px] text-center text-[#8BA2B1] text-[21.3176px] font-[400] leading-[32px] font-regular mt-[10px]">
               {responseError}
             </div>
-          </div>
+            {responseError.indexOf('Please verify your email') >=0 ? <button onClick={(e) => verify(formik.values.email)} className="w-full lg:w-[265px] h-[38px] lg:h-[59px] bg-[#F2F2F2] rounded-[32.4462px] lg:rounded-[50px] text-[#5F8FE6] text-[12.9785px] lg:text-[20px] leading-[19px] lg:leading-[30px] font-[700] font-extraBold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">Send again</button> 
+            : <button onClick={(e) => setResponseError('')} className="w-full lg:w-[265px] h-[38px] lg:h-[59px] bg-[#F2F2F2] rounded-[32.4462px] lg:rounded-[50px] text-[#5F8FE6] text-[12.9785px] lg:text-[20px] leading-[19px] lg:leading-[30px] font-[700] font-extraBold hover:shadow-[0_4px_15px_rgba(0,0,0,0.2)]">Try again</button>}
+          </form>
       }
      
     </section>

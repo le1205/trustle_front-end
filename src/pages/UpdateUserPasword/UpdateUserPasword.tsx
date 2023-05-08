@@ -119,7 +119,7 @@ const UpdateUserPasword = () => {
               onChange={formik.handleChange}
               value={formik.values.password}
               className={`${ formik.touched.password && formik.errors.password ? "border-solid border-[1px] border-[#ff0000]" : "" } w-full h-[38.43px] lg:h-[59.22px] bg-[#F2F2F2] rounded-[22.6049px] lg:rounded-[34.8344px] text-[#8BA2B1] text-[13.9036px] lg:text-[21.4257px] leading-[21px] lg:leading-[32px] font-[400] font-light pl-[18.7px] lg:pl-[28.9px] outline-none ring-0`} 
-              placeholder="Submit password" 
+              placeholder="Submit password"
             />
             {formik.values.password && (              
               !passwordShow ?
@@ -132,7 +132,7 @@ const UpdateUserPasword = () => {
                   <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/>
                   <path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12-.708.708z"/>
                 </svg>      
-            )}       
+            )}      
           </div>     
           <p className="text-[#ff0000] mt-[-20px]">
             {formik.touched.password && formik.errors.password}
